@@ -10,7 +10,7 @@
          </div>
          <div class="goods__bottom">
             <div class="goods__bottom__price">
-               {{goods.price}} AZN
+               {{currency}} AZN
             </div>
             <div class="goods__bottom__title"><a href="">{{goods.title}}</a></div>
          </div>
@@ -27,11 +27,12 @@
 
       methods: {
          ...mapMutations(["addFav"]),
-        
       },
       computed: {
          ...mapGetters(['getAllImages']),
-       
+         currency() {
+            return this.goods.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+         },
          retDate() {
             let year = String(new Date(this.goods.date).getFullYear());
             let getMonth = new Date(this.goods.date).getMonth();

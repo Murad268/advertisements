@@ -5,8 +5,11 @@
          <a href="">{{ status=='vip'?"Bütün VİP elanlar":status=='last'?"Bütün elanlar":"Bütün elanlar"}}</a>
       </div>
 
-      <div class="goods__wrapper">
+      <div v-if="status=='vip'" class="goods__wrapper">
          <GoodsVue v-for="goods in getVipGoods" :key="goods.id" :goods="goods"/>
+      </div>
+      <div v-if="status=='last'" class="goods__wrapper">
+         <GoodsVue v-for="goods in getLastGoods" :key="goods.id" :goods="goods"/>
       </div>
    </div>
 </template>
@@ -21,7 +24,7 @@
          GoodsVue
       },
       computed: {
-         ...mapGetters(["getVipGoods"])
+         ...mapGetters(["getVipGoods", "getLastGoods", "getAllImages"])
       }
    }
 </script>

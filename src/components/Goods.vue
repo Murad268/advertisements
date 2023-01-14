@@ -1,27 +1,101 @@
 <template>
+   
    <div class="goods">
       <div class="goods__top">
-         <i class="fa-regular fa-heart favor" aria-hidden="true"></i>
+         <i @click="addFav(goods.id)"   class="fa fa-heart favor" :class="{'addedFav fa fa-heart':goods.fav, 'fa-regular fa-heart':!goods.fav}"  aria-hidden="true"></i>
          <i v-if="goods.status=='vip'" class="fas fa-crown crown"></i>
-         <img src="../assets/goods/ss.png" alt="">
-         <div v-if="goods.shop" class="goods__shop">
+         <img :src="require('../assets/goods/'+ getAllImages.find(item=>item.goodId==goods.id).src)" alt="">
+         <div  v-if="goods.shop" class="goods__shop">
             Mağaza
          </div>
          <div class="goods__bottom">
             <div class="goods__bottom__price">
                {{goods.price}} AZN
             </div>
-            <div class="goods__bottom__title">Apple sakajajak</div>
+            <div class="goods__bottom__title"><a href="">{{goods.title}}</a></div>
          </div>
       </div>
-      <div class="goods__bottom__time">Bakı, dünən, 20:40</div>
+      <div class="goods__bottom__time">{{ goods.city }}, {{retDate}}</div>
    </div>
 </template>
 
 <script>
+   import { mapGetters, mapMutations } from 'vuex';
    export default {
       name: "GoodsVue",
-      props: ["goods"]
+      props: ["goods"],
+
+      methods: {
+         ...mapMutations(["addFav"]),
+        
+      },
+      computed: {
+         ...mapGetters(['getAllImages']),
+       
+         retDate() {
+            let year = String(new Date(this.goods.date).getFullYear());
+            let getMonth = new Date(this.goods.date).getMonth();
+            let day = new Date(this.goods.date).getDate();
+            let time = new Date(this.goods.date).getHours()+":"+new Date(this.goods.date).getMinutes();
+            let currentYear = new Date().getFullYear();
+            let currentDay = new Date().getDate();
+            let currentMonth = new Date().getMonth();
+            let month;
+            let curr;
+
+         
+            switch(getMonth) {
+               case 0: 
+                   month = "yanvar";
+                   break
+               case 1: 
+                   month = "fevral";
+                   break
+               case 2: 
+                   month = "mart";
+                   break
+               case 3: 
+                   month = "aprel";
+                   break
+               case 4: 
+                   month = "may";
+                   break
+               case 5: 
+                   month = "iyun";
+                   break
+               case 6: 
+                  month = "iyul";
+                  break
+               case 7: 
+                  month = "avqust";
+                  break
+               case 8: 
+                  month = "sentyabr";
+                  break
+               case 9: 
+                  month = "oktyabr";
+                  break
+               case 10: 
+                  month = "noyabr";
+                  break
+               case 11: 
+                  month = "dekabr";
+                  break
+            }
+            if(currentDay-day==1 && currentMonth==getMonth && currentYear==currentYear) {
+               curr = "dünən "
+               return curr + time
+            } else if(currentDay == day && currentMonth==getMonth && currentYear==currentYear) {
+               curr = "bu gün "
+               return curr+time
+            } else {
+               curr = ""
+               return day+" "+month+" "+year+" "+time
+            }
+           
+           
+         }
+      }
    }
 </script>
 
@@ -60,6 +134,14 @@
             font-size: 25px;
             cursor: pointer;
          }
+         .addedFav {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: orange;
+            font-size: 25px;
+            cursor: pointer;
+         }
          .crown {
             position: absolute;
             bottom: 10px;
@@ -84,7 +166,11 @@
             margin-bottom: 4px;
          }
          &__title {
-            font-size: 17px;
+            a {
+               font-size: 17px;
+               text-decoration: none;
+               color: black
+            }
          }
          &__time {
             margin-top: 4px;

@@ -1,16 +1,17 @@
 <template>
-  <HeaderVue/>
-  <AddV status="vip"/>
-  <AddV status="last"/>
+  <Header/>
+  <router-view/>
 </template>
 
 <script>
-  import HeaderVue from './components/Header.vue';
-  import AddV from './components/AddV.vue';
+  import Header from './components/Header.vue';
+  import Home from './views/Home.vue';
+  import FavVue from './views/Favorites.vue'
   export default {
     components: {
-      HeaderVue,
-      AddV
+      Home,
+      Header,
+      FavVue
     }
   }
 </script>

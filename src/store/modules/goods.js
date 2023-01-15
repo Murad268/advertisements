@@ -2,8 +2,8 @@ export default({
    state: {
       offsite: 10,
       goods: localStorage.getItem('goods')?JSON.parse(localStorage.getItem('goods')):[
-         {id:1, fav: true, city: "Bakı", shop: true, title: "Tümosan 5275, 2021 il", price: 12211, date: "2023-01-12 12:45", src: "", status: "vip"},
-         {id: 2, fav: true, city: "Qusar", shop: true, title: "Tırtıllı Ekskavator \"CASE CE CX350-8\", 2021 il", price: 297000 , date: "2021-05-12 09:33", src: "", status: "ad"},
+         {id:1, fav: false, city: "Bakı", shop: true, title: "Tümosan 5275, 2021 il", price: 12211, date: "2023-01-12 12:45", src: "", status: "vip"},
+         {id: 2, fav: false, city: "Qusar", shop: true, title: "Tırtıllı Ekskavator \"CASE CE CX350-8\", 2021 il", price: 297000 , date: "2021-05-12 09:33", src: "", status: "ad"},
          {id: 3, fav: false, city: "Ağcabədi", shop: false, title: "LADA (VAZ) 2106, 2003 il", price: 7100, date: "2020-02-09", src: "", status: "ad"},
          {id: 4, fav: false, city: "Gəncə", shop: true, title: "Ofis oturacağı", price: 28, date: "2017-02-08 03:12", src: "", status: "ad"},
          {id: 5, fav: false, city: "Quba", shop: true, title: "Jalüz pərdə", price: 38, date: "2021-05-12 11:29", src: "", status: "vip"},
@@ -84,7 +84,17 @@ export default({
       addFav(state, id) {
          state.goods=state.goods.map(item=>{
             if(item.id===id) {
-               return {...item, fav:!item.fav}
+               return {...item, fav:true}
+            } else {
+               return item
+            }
+         }) 
+         localStorage.setItem('goods', JSON.stringify(state.goods))
+      },
+      delFav(state, id) {
+         state.goods=state.goods.map(item=>{
+            if(item.id===id) {
+               return {...item, fav:false}
             } else {
                return item
             }

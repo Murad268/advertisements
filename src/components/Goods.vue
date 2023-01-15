@@ -1,11 +1,13 @@
 <template>
    <div class="goods">
       <div class="goods__top">
-         <i @click="added(goods.id, goods)"   class="fa fa-heart favor" :class="{'addedFav fa fa-heart':goods.fav, 'fa-regular fa-heart':!goods.fav}"  aria-hidden="true"></i>
+         <i v-if="favoritesList.includes(goods)" @click="delled(goods.id)" class="fa fa-heart addedFav"   aria-hidden="true"></i>
+         <i v-else @click="added(goods.id, goods)"   class="fa-regular fa-heart favor"  aria-hidden="true"></i>
          <i v-if="goods.status=='vip'" class="fas fa-crown crown"></i>
          <img :src="require('../assets/goods/'+ getAllImages.find(item=>item.goodId==goods.id).src)" alt="">
          <div  v-if="goods.shop" class="goods__shop">
             Mağaza
+           
          </div>
          <div class="goods__bottom">
             <div class="goods__bottom__price">
@@ -25,14 +27,18 @@
       props: ["goods"],
 
       methods: {
-         ...mapMutations(["addFav", "addFavorites"]),
+         ...mapMutations(["addFav", "addFavorites", "deleteFav", "delFav"]),
          added(id, goods) {
             this.addFav(id)
             this.addFavorites(goods)
+         },
+         delled(id) {
+            this.delFav(id)
+            this.deleteFav(id)
          }
       },
       computed: {
-         ...mapGetters(['getAllImages']),
+         ...mapGetters(['getAllImages', 'favoritesList']),
          currency() {
             return this.goods.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
          },

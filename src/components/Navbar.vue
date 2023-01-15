@@ -15,9 +15,8 @@
                <div class="navbar__search__block">
                   <form action="">
                      <input type="text">
-                     <select name="" id="">
-                        <option value="">Baki</option>
-                        <option value="">Qusar</option>
+                     <select class="city__select" name="" id="">
+                        <City v-for="city in allCities" :key="city.id" :city="city"/>
                      </select>
                   </form>
                  <div class="navbar__start__sr">
@@ -37,9 +36,16 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+   import City from './City.vue';
    export default {
       name: "NavbarVue",
-     
+      components: {
+         City
+      },
+      computed: {
+         ...mapGetters(["allCities"])
+      }
    }
 </script>
 
@@ -116,4 +122,5 @@
          }
       }
    }
+
 </style>

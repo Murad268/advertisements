@@ -14,10 +14,7 @@
                <div><a href="">Yardım</a></div>
                <div class="fav">
                   <i class="fa fa-heart" aria-hidden="true"></i>
-                  <nav>
-                     <router-link to="/favorites" style="color: #DBD2D6">Seçilmişlər</router-link>
-                  </nav>
-               
+                  <router-link to="/favorites" style="color: #DBD2D6">Seçilmişlər</router-link>
                </div>
                <a class="top__right__user__enter">
                   <div class="top__right__user__enter__circle"><i class="fa fa-user" aria-hidden="true"></i></div>

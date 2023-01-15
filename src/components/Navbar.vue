@@ -38,7 +38,8 @@
 
 <script>
    export default {
-      name: "NavbarVue"
+      name: "NavbarVue",
+     
    }
 </script>
 

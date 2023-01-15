@@ -89,7 +89,7 @@ export default({
                return item
             }
          }) 
-         console.log(state.goods[0].fav)
+         localStorage.setItem('goods', JSON.stringify(state.goods))
       }
    },
    actions: {

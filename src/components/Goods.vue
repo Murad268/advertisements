@@ -1,8 +1,7 @@
 <template>
-   
    <div class="goods">
       <div class="goods__top">
-         <i @click="addFav(goods.id)"   class="fa fa-heart favor" :class="{'addedFav fa fa-heart':goods.fav, 'fa-regular fa-heart':!goods.fav}"  aria-hidden="true"></i>
+         <i @click="added(goods.id, goods)"   class="fa fa-heart favor" :class="{'addedFav fa fa-heart':goods.fav, 'fa-regular fa-heart':!goods.fav}"  aria-hidden="true"></i>
          <i v-if="goods.status=='vip'" class="fas fa-crown crown"></i>
          <img :src="require('../assets/goods/'+ getAllImages.find(item=>item.goodId==goods.id).src)" alt="">
          <div  v-if="goods.shop" class="goods__shop">
@@ -26,7 +25,11 @@
       props: ["goods"],
 
       methods: {
-         ...mapMutations(["addFav"]),
+         ...mapMutations(["addFav", "addFavorites"]),
+         added(id, goods) {
+            this.addFav(id)
+            this.addFavorites(goods)
+         }
       },
       computed: {
          ...mapGetters(['getAllImages']),

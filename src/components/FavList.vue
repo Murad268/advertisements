@@ -46,7 +46,7 @@
          width: 240px;
          height: 45px;
          background: #FF4F08;
-         border-radius: 10px;
+         border-radius: 5px;
          text-decoration: none;
          color: white;
          display: flex;

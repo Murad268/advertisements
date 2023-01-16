@@ -33,6 +33,36 @@
          <div class="footer__cities">
             <FootCity v-for="city in allCities" :city="city" :key="city.key"/>
          </div>
+         <div class="footer__links">
+            <a href="" class="footer__link">
+               Layihə haqqında
+            </a>
+            <a href="" class="footer__link">
+               Qaydalar
+            </a>
+            <a href="" class="footer__link">
+               İstifadəçi razılaşması
+            </a>
+            <a href="" class="footer__link">
+               Ümumi oferta müqaviləsi
+            </a>
+            <a href="" class="footer__link">
+               Məxfilik siyasəti
+            </a>
+         </div>
+      </div>
+      <div class="footer__bottom">
+         <div class="container">
+            <div class="footer__bottom__wrapper">
+               <div class="footer__bottom__left">
+                  Saytın Administrasiyası reklam bannerlərinin və yerləşdirilmiş elanların məzmununa görə məsuliyyət daşımır.
+               </div>
+               <div class="footer__bottom__right">
+                  <div>© 2008-2023 Digital Classifieds MMC. VÖEN: 1405631661</div>
+                  <div><a href="">Mobil versiyası</a></div>
+               </div>
+            </div>
+         </div>
       </div>
    </div>
 </template>
@@ -108,6 +138,43 @@
          a {
             text-decoration: none;
             font-size: 14px;
+         }
+      }
+      &__links {
+         margin-top: 40px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+        
+      }
+      &__link {
+         text-decoration: none;
+         color: black !important
+      }
+      &__bottom {
+         margin-top: 30px;
+         padding: 15px 0;
+         background: #FF4F08;
+         &__left {
+            width: 420px;
+            color: white;
+            font-size: 15px;
+         }
+         &__right {
+            width: 450px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: white;
+            a {
+               color: white;
+            }
+         }
+         &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
          }
       }
    }

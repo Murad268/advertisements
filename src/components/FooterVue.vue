@@ -127,6 +127,7 @@
          &__ph {
             display: flex;
             flex-direction: column;
+            line-height: 25px;
          }
       }
       &__cities {

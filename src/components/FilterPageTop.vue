@@ -1,0 +1,110 @@
+<template>
+   <div class="filterPage">
+         <div class="container">
+            <div class="filterPage__wrapper">
+               <div class="filterPage__top">Bütün kateqoriyalar</div>
+               <div class="filterPage__bottom">
+                  Bütün kateqoriyalar <span>(179 elan)</span>
+               </div>
+            </div>
+            <div class="filterPage__footer">
+               <div @click="setSee" class="filterPage__curr">
+                 <div> Qiymət, AZN <span>🢓</span></div>
+                 <div v-if="seeBot" class="filterPage__curr__inputs">
+                     <div>
+                        <input placeholder="min." type="text">
+                        -
+                        <input placeholder="min." type="text">
+                     </div>
+                 </div>
+               </div>
+               <div class="text-primary filterPage__btn">Tətbiq et</div>
+            </div>
+         </div>
+      </div>
+</template>
+
+<script>
+   export default {
+      name: "FilterTopVue",
+      data() {
+         return {
+            seeBot: false
+         }
+      },
+      methods: {
+         setSee() {
+            return this.seeBot=!this.seeBot
+         }
+      }
+   }
+</script>
+
+<style lang="scss" scoped>
+   .filterPage {
+      padding: 20px 0;
+      &__top {
+         color: gray;
+         font-size: 17px;
+      }
+      &__bottom {
+         font-size: 19px;
+         font-weight: bold;
+         margin-top: 20px;
+         span {
+            color: gray;
+            font-size: 17px;
+         }
+      }
+      &__footer {
+         margin-top: 30px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+      &__curr {
+         width: 140px;
+         height: 40px;
+         background: #FCF8F7;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: gray;
+         cursor: pointer;
+         position: relative;
+         &__inputs {
+            background-color: white;
+            width: 220px;
+            height: 50px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            padding-left: 6px;
+            bottom: -55px;
+            input {
+               width: 90px;
+               height: 40px;
+               overflow: hidden;
+               border: 1px solid rgba(0, 0, 0, 0.2);
+               border-radius: 5px;
+               padding-left: 5px;
+            }
+         }
+         span {
+            color: #FF4F08
+         }
+      }
+      &__btn {
+         width: 100px;
+         height: 40px;
+         background: #DAE8FF;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: #D1E1FE;
+         cursor: pointer;
+      }
+   }
+</style>

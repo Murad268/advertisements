@@ -1,8 +1,8 @@
 <template>
    <div class="goods">
       <div class="goods__top">
-         <i v-if="favoritesList.includes(goods)" @click="delled(goods.id)" class="fa fa-heart addedFav"   aria-hidden="true"></i>
-         <i v-else @click="added(goods.id, goods)"   class="fa-regular fa-heart favor"  aria-hidden="true"></i>
+         <i v-if="goods.fav" @click="delled(goods.id)" class="fa fa-heart addedFav"   aria-hidden="true"></i>
+         <i v-else @click="added(goods.id, goods)" class="fa-regular fa-heart favor"  aria-hidden="true"></i>
          <i v-if="goods.status=='vip'" class="fas fa-crown crown"></i>
          <img :src="require('../assets/goods/'+ getAllImages.find(item=>item.goodId==goods.id).src)" alt="">
          <div  v-if="goods.shop" class="goods__shop">

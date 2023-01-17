@@ -83,6 +83,7 @@
 
 <style lang="scss" scoped>
    .footer {
+      padding-top: 30px;
       a {
          color: gray;
       }

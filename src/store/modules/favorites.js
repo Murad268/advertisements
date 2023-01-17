@@ -4,6 +4,7 @@ export default({
    },
    mutations: {
       addFavorites(state, favorites) {
+         favorites.fav=true;
          state.favorites=[...state.favorites, favorites];
          localStorage.setItem('favorites', JSON.stringify(state.favorites))
       },

@@ -2,7 +2,6 @@
    <div class="filterReslts">
       <AddV :fl="vipResults" status="vip"/>
       <AddV :fl="lastResults" status="last"/>   
-      {{ getMax }}   
    </div>
 </template>
 

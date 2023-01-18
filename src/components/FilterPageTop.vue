@@ -18,7 +18,6 @@
                         </div>
                      </div>
                </div>
-         
                <div @click="setMinMax" class="text-primary filterPage__btn">Tətbiq et</div>
             </div>
             <div v-if="$route.params.filter=='bütün_kateqoriyalar'" class="filterPage__filter">

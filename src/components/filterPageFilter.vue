@@ -1,5 +1,5 @@
 <template>
-   <a href="">{{ type.name }}  <span> (111)</span></a>
+   <router-link :to="{name: 'goods', params: {city: $route.params.city, name: $route.params.name, filter: type.name}}">{{ type.name }}  <span> (111)</span></router-link>
 </template>
 
 <script>

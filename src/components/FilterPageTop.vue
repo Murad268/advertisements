@@ -2,7 +2,7 @@
    <div class="filterPage">
          <div class="container">
             <div class="filterPage__wrapper">
-               <div class="filterPage__top">Bütün kateqoriyalar</div>
+               <div @click="gett" class="filterPage__top">Bütün kateqoriyalar</div>
                <div class="filterPage__bottom">
                   Bütün kateqoriyalar <span>(179 elan)</span>
                </div>
@@ -20,8 +20,11 @@
                </div>
                <div class="text-primary filterPage__btn">Tətbiq et</div>
             </div>
-            <div class="filterPage__filter">
-               <filterPageFilter v-for="filter in getTypes" :key="filter.id" :type="filter"/>
+            <div v-if="$route.params.filter=='bütün_kateqoriyalar'" class="filterPage__filter">
+               <filterPageFilter  v-for="filter in getTypes" :key="filter.id" :type="filter"/>
+            </div>
+            <div v-if="$route.params.filter != 'bütün_kateqoriyalar'" class="filterPage__filter">
+               <filterPageFilter v-for="filter in gett" :key="filter.id" :type="filter"/>
             </div>
             <FilterResltsVue/>
          </div>
@@ -39,11 +42,20 @@
          FilterResltsVue
       }, 
       computed: {
-         ...mapGetters(['getTypes'])
+         ...mapGetters(['getTypes', 'getSubTypes']),
+         gett() {
+            try {
+               let id = this.getTypes.filter(item => item.name==this.$route.params.filter)[0].id;
+               return this.getSubTypes.filter(item => item.uptype==id)  
+            } catch {
+               return []
+            }
+         }
       },
       data() {
          return {
-            seeBot: false
+            seeBot: false,
+            data : ""
          }
       },
       methods: {

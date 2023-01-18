@@ -4,9 +4,11 @@
          <div>{{ status=='vip'?"VIP ELANLAR":status=='last'?"SON ELANLAR":"ELANLAR" }}</div>
          <a href="">{{ status=='vip'?"Bütün VİP elanlar":status=='last'?"Bütün elanlar":"Bütün elanlar"}}</a>
       </div>
-
       <div v-if="status=='vip'" class="goods__wrapper">
          <GoodsVue v-for="goods in fl" :key="goods.id" :goods="goods"/>
+      </div>
+      <div v-if="fl.length<=0">
+         Sizin sorğunuza uyğun heçnə tapılmadı
       </div>
       <div v-if="status=='last'" class="goods__wrapper">
          <GoodsVue v-for="goods in fl" :key="goods.id" :goods="goods"/>

@@ -1,7 +1,8 @@
 <template>
    <div class="filterReslts">
       <AddV :fl="vipResults" status="vip"/>
-      <AddV :fl="lastResults" status="last"/>      
+      <AddV :fl="lastResults" status="last"/>   
+      {{ getMax }}   
    </div>
 </template>
 
@@ -15,7 +16,7 @@
          AddV
       },
       computed: {
-         ...mapGetters(['getAllGoods', 'getSubTypes', 'getTypes']),
+         ...mapGetters(['getAllGoods', 'getSubTypes', 'getTypes', 'getMin', 'getMax']),
          vipResults() {
             let arr = this.getResults(this.$route.params.city, this.$route.params.name, this.$route.params.filter)
             if(arr) {
@@ -37,25 +38,25 @@
       methods: {
          getResults(city, name, filter) {
             if(city!="bütün_şəhərlər" && name == "bütün_elanlar" && filter == "bütün_kateqoriyalar") {
-               return this.getAllGoods.filter(item => item.city == city);
+               return this.getAllGoods.filter(item => item.city == city  && item.price>this.getMin && item.price<this.getMax);
             } else if(city!="bütün_şəhərlər" && name!="bütün_elanlar" && filter == "bütün_kateqoriyalar") {
-               return this.getAllGoods.filter(item => item.city==city && item.title.toLowerCase().includes(name.toLowerCase()));
+               return this.getAllGoods.filter(item => item.city==city && item.title.toLowerCase().includes(name.toLowerCase()   && item.price>this.getMin && item.price<this.getMax));
             } else if(city=="bütün_şəhərlər" && name!="bütün_elanlar" && filter == "bütün_kateqoriyalar") {
-               return this.getAllGoods.filter(item => item.title.toLowerCase().includes(name.toLowerCase()));
+               return this.getAllGoods.filter(item => item.title.toLowerCase().includes(name.toLowerCase()) && item.price>this.getMin && item.price<this.getMax);
             } else if(city!="bütün_şəhərlər" && name == "bütün_elanlar" && filter == "bütün_kateqoriyalar") {
-               return this.getAllGoods.filter(item => item.title.toLowerCase().includes(name.toLowerCase()));
+               return this.getAllGoods.filter(item => item.title.toLowerCase().includes(name.toLowerCase()) && item.price>this.getMin && item.price<this.getMax);
             } else {
                try{
                   let id = this.getSubTypes.filter(item => item.name == filter)[0].id
                   if(id) {
-                     return this.getAllGoods.filter(item => item.typeId==id)
+                     return this.getAllGoods.filter(item => item.typeId==id && item.price>this.getMin && item.price<this.getMax)
                   } else {
                      return []
                   }
                } catch {
                   let id = this.getTypes.filter(item => item.name == filter)[0].id;
                   let arr = [];
-                  const subTitles = this.getSubTypes.filter(item => item.uptype==id)
+                  const subTitles = this.getSubTypes.filter(item => item.uptype==id && item.price>this.getMin && item.price<this.getMax)
                   subTitles.forEach(title => {
                      let goods = this.getAllGoods.find(item => item.typeId==title.id)
                      if(goods) {

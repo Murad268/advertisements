@@ -8,17 +8,18 @@
                </div>
             </div>
             <div class="filterPage__footer">
-               <div @click="setSee" class="filterPage__curr">
+               <div @click.self="setSee" class="filterPage__curr">
                  <div> Qiymət, AZN <span>🢓</span></div>
-                 <div v-if="seeBot" class="filterPage__curr__inputs">
-                     <div>
-                        <input placeholder="min." type="text">
-                        -
-                        <input placeholder="min." type="text">
+                     <div v-if="seeBot" class="filterPage__curr__inputs">
+                        <div>
+                           <input v-model="minMax.min" placeholder="min." type="text">
+                           -
+                           <input v-model="minMax.max" placeholder="min." type="text">
+                        </div>
                      </div>
-                 </div>
                </div>
-               <div class="text-primary filterPage__btn">Tətbiq et</div>
+         
+               <div @click="setMinMax" class="text-primary filterPage__btn">Tətbiq et</div>
             </div>
             <div v-if="$route.params.filter=='bütün_kateqoriyalar'" class="filterPage__filter">
                <filterPageFilter  v-for="filter in getTypes" :key="filter.id" :type="filter"/>
@@ -32,7 +33,7 @@
 </template>
 
 <script>
-   import { mapGetters } from 'vuex';
+   import { mapGetters, mapMutations } from 'vuex';
    import filterPageFilter from './filterPageFilter.vue';
    import FilterResltsVue from './FilterReslts.vue';
    export default {
@@ -54,13 +55,21 @@
       },
       data() {
          return {
-            seeBot: false,
-            data : ""
+            seeBot: true,
+            data : "",
+            minMax: {
+               min: 1,
+               max: 10000000
+            }
          }
       },
       methods: {
+         ...mapMutations(["getMNinMax"]),
          setSee() {
             return this.seeBot=!this.seeBot
+         },
+         setMinMax() {
+            this.getMNinMax(this.minMax)
          }
       }
    }

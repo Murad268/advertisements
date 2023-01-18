@@ -6,25 +6,22 @@
       </div>
 
       <div v-if="status=='vip'" class="goods__wrapper">
-         <GoodsVue v-for="goods in getVipGoods" :key="goods.id" :goods="goods"/>
+         <GoodsVue v-for="goods in fl" :key="goods.id" :goods="goods"/>
       </div>
       <div v-if="status=='last'" class="goods__wrapper">
-         <GoodsVue v-for="goods in getLastGoods" :key="goods.id" :goods="goods"/>
+         <GoodsVue v-for="goods in fl" :key="goods.id" :goods="goods"/>
       </div>
    </div>
 </template>
 
 <script>
    import GoodsVue from './Goods.vue';
-   import { mapGetters } from 'vuex';
+
    export default {
       name: "AdHeVue",
-      props: ["status"],
+      props: ["status", "fl"],
       components: {
          GoodsVue
-      },
-      computed: {
-         ...mapGetters(["getVipGoods", "getLastGoods", "getAllImages"])
       }
    }
 </script>

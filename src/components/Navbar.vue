@@ -13,14 +13,14 @@
             </div>
             <div class="navbar__search">
                <div class="navbar__search__block">
-                  <form action="">
-                     <input type="text">
-                     <select class="city__select" name="" id="">
+                  <div>
+                     <input v-model="name" type="text">
+                     <select v-model="city" class="city__select" name="" id="">
                         <City v-for="city in allCities" :key="city.id" :city="city"/>
                      </select>
-                  </form>
-                 <div class="navbar__start__sr">
-                     <a href="" class="btn btn-danger">
+                  </div>
+                 <div @click="goGoods" class="navbar__start__sr">
+                     <a class="btn btn-danger">
                         <i class="fa fa-search" aria-hidden="true"></i>
                         Tap
                      </a>
@@ -45,6 +45,17 @@ import { mapGetters } from 'vuex';
       },
       computed: {
          ...mapGetters(["allCities"])
+      },
+      data() {
+         return {
+            city: "",
+            name: ""
+         }
+      },
+      methods: {
+         goGoods() {
+            this.$router.push({ name: 'goods', params: { city: this.city?this.city:"bütün_şəhərlər", name: this.name?this.name:"bütün_elanlar", filter: 'bütün_kateqoriyalar'} })
+         }
       }
    }
 </script>
@@ -96,7 +107,7 @@ import { mapGetters } from 'vuex';
             align-items: center;
             height: 45px;
             border-radius: 7px;
-               form {
+               div {
                   height: 100%;
                   input {
                      height: 90%;
@@ -117,8 +128,7 @@ import { mapGetters } from 'vuex';
                         color: black
                      }
                   }
-            }
-           
+            }  
          }
       }
    }

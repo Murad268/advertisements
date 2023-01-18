@@ -1,5 +1,5 @@
 <template>
-   <option value="">{{city.city}}</option>
+   <option>{{city.city}}</option>
 </template>
 
 <script>

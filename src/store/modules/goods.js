@@ -78,7 +78,7 @@ export default({
     },
     getAllImages(state) {
       return state.goodImages;
-    }
+    },
    },
    mutations: {
       addFav(state, id) {
@@ -103,6 +103,6 @@ export default({
       }
    },
    actions: {
-      
+   
    },
 })

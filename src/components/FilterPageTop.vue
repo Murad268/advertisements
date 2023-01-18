@@ -20,13 +20,27 @@
                </div>
                <div class="text-primary filterPage__btn">Tətbiq et</div>
             </div>
+            <div class="filterPage__filter">
+               <filterPageFilter v-for="filter in getTypes" :key="filter.id" :type="filter"/>
+            </div>
+            <FilterResltsVue/>
          </div>
       </div>
 </template>
 
 <script>
+   import { mapGetters } from 'vuex';
+   import filterPageFilter from './filterPageFilter.vue';
+   import FilterResltsVue from './FilterReslts.vue';
    export default {
       name: "FilterTopVue",
+      components: {
+         filterPageFilter,
+         FilterResltsVue
+      }, 
+      computed: {
+         ...mapGetters(['getTypes'])
+      },
       data() {
          return {
             seeBot: false
@@ -43,6 +57,13 @@
 <style lang="scss" scoped>
    .filterPage {
       padding: 20px 0;
+      &__filter {
+         padding: 10px;
+         margin-top: 20px;
+         background: #F6F7FA;
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+      }
       &__top {
          color: gray;
          font-size: 17px;
@@ -73,6 +94,7 @@
          cursor: pointer;
          position: relative;
          &__inputs {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             background-color: white;
             width: 220px;
             height: 50px;
@@ -83,6 +105,7 @@
             position: absolute;
             padding-left: 6px;
             bottom: -55px;
+            left: 0;
             input {
                width: 90px;
                height: 40px;

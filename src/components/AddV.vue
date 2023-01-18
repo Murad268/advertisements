@@ -1,7 +1,7 @@
 <template>
    <div>
-      <AdHeaders v-if="status=='vip'" status="vip"/>
-      <AdHeaders v-else-if="status=='last'" status="last"/>
+      <AdHeaders :fl="fl" v-if="status=='vip'" status="vip"/>
+      <AdHeaders :fl="fl" v-else-if="status=='last'" status="last"/>
    </div>
 </template>
 
@@ -9,7 +9,7 @@
    import AdHeaders from './AdHeaders.vue';
    export default {
       name: "AdvsVue",
-      props: ["status"],
+      props: ["status", "fl"],
       components: {
          AdHeaders
       }

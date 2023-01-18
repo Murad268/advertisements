@@ -1,5 +1,5 @@
 <template>
-   <a href="">{{ city.city }}</a>
+   <router-link :to="{name: 'goods', params: {city: city.city, name: 'bütün_elanlar', filter: 'bütün_kateqoriyalar'}}">{{ city.city }}</router-link>
 </template>
 
 <script>

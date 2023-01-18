@@ -2,9 +2,9 @@
    <div class="filterPage">
          <div class="container">
             <div class="filterPage__wrapper">
-               <div @click="gett" class="filterPage__top">Bütün kateqoriyalar</div>
+               <div class="filterPage__top">Bütün kateqoriyalar</div>
                <div class="filterPage__bottom">
-                  Bütün kateqoriyalar <span>(179 elan)</span>
+                  Bütün kateqoriyalar <span>({{ getTypes.length }})</span>
                </div>
             </div>
             <div class="filterPage__footer">

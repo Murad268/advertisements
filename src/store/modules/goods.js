@@ -2,7 +2,8 @@ export default({
    state: {
       offsite: 10,
       min: 1,
-      max: 1,
+      max: 1000000,
+      adverCount: 0,
       goods: localStorage.getItem('goods')?JSON.parse(localStorage.getItem('goods')):[
          {id:1, typeId: 5, fav: false, city: "Bakı", shop: true, title: "Tümosan 5275, 2021 il", price: 12211, date: "2023-01-12 12:45", src: "", status: "vip"},
          {id: 2, typeId: 5, fav: false, city: "Qusar", shop: true, title: "Tırtıllı Ekskavator \"CASE CE CX350-8\", 2021 il", price: 297000 , date: "2021-05-12 09:33", src: "", status: "ad"},
@@ -89,9 +90,15 @@ export default({
     },
     getMax(state) {
       return state.max
+    },
+    getAdverCount(state) {
+      return state.adverCount
     }
    },
    mutations: {
+      setAdverCount(state, count) {
+         state.adverCount=count
+      },
       getMNinMax(state, minMax) {
          state.min=+ minMax.min,
          state.max= +minMax.max
@@ -119,6 +126,6 @@ export default({
       }
    },
    actions: {
-   
+      
    },
 })

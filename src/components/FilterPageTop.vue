@@ -4,12 +4,12 @@
             <div class="filterPage__wrapper">
                <div class="filterPage__top">Bütün kateqoriyalar</div>
                <div class="filterPage__bottom">
-                  Bütün kateqoriyalar <span>({{ getTypes.length }})</span>
+                  {{ categoryGet }} <span>{{ getAdverCount }}</span>
                </div>
             </div>
             <div class="filterPage__footer">
                <div @click.self="setSee" class="filterPage__curr">
-                 <div> Qiymət, AZN <span>🢓</span></div>
+                 <div @click.self="setSee"> Qiymət, AZN <span>🢓</span></div>
                      <div v-if="seeBot" class="filterPage__curr__inputs">
                         <div>
                            <input v-model="minMax.min" placeholder="min." type="text">
@@ -20,13 +20,13 @@
                </div>
                <div @click="setMinMax" class="text-primary filterPage__btn">Tətbiq et</div>
             </div>
-            <div v-if="$route.params.filter=='bütün_kateqoriyalar'" class="filterPage__filter">
+            <div v-if="$route.params.filter=='bütün_kateqoriyalar' && getTypes.length" class="filterPage__filter">
                <filterPageFilter  v-for="filter in getTypes" :key="filter.id" :type="filter"/>
             </div>
-            <div v-if="$route.params.filter != 'bütün_kateqoriyalar'" class="filterPage__filter">
+            <div v-if="$route.params.filter != 'bütün_kateqoriyalar' && gett.length" class="filterPage__filter">
                <filterPageFilter v-for="filter in gett" :key="filter.id" :type="filter"/>
             </div>
-            <FilterResltsVue/>
+            <FilterResltsVue />
          </div>
       </div>
 </template>
@@ -42,7 +42,10 @@
          FilterResltsVue
       }, 
       computed: {
-         ...mapGetters(['getTypes', 'getSubTypes']),
+         ...mapGetters(['getTypes', 'getSubTypes', "getAdverCount", "getAdverCount"]),
+         categoryGet() {
+            return this.$route.params.filter.replace("_", " ")[0].toUpperCase() + this.$route.params.filter.replace("_", " ").slice(1)
+         },
          gett() {
             try {
                let id = this.getTypes.filter(item => item.name==this.$route.params.filter)[0].id;
@@ -54,7 +57,7 @@
       },
       data() {
          return {
-            seeBot: true,
+            seeBot: false,
             data : "",
             minMax: {
                min: 1,

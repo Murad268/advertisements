@@ -6,13 +6,16 @@
 </template>
 
 <script>
-   import { mapGetters } from 'vuex';
+   import { mapGetters, mapMutations } from 'vuex';
    import AddV from '@/components/AddV.vue';
 
    export default {
       name: "FilterResultsVue",
       components: {
          AddV
+      },
+      updated() {
+         this.setAdverCount(this.getResults(this.$route.params.city, this.$route.params.name, this.$route.params.filter).length)
       },
       computed: {
          ...mapGetters(['getAllGoods', 'getSubTypes', 'getTypes', 'getMin', 'getMax']),
@@ -35,6 +38,8 @@
          
       },
       methods: {
+         ...mapMutations(['setAdverCount']),
+         
          getResults(city, name, filter) {
             if(city!="bütün_şəhərlər" && name == "bütün_elanlar" && filter == "bütün_kateqoriyalar") {
                return this.getAllGoods.filter(item => item.city == city  && item.price>this.getMin && item.price<this.getMax);
@@ -55,13 +60,14 @@
                } catch {
                   let id = this.getTypes.filter(item => item.name == filter)[0].id;
                   let arr = [];
-                  const subTitles = this.getSubTypes.filter(item => item.uptype==id && item.price>this.getMin && item.price<this.getMax)
+                  const subTitles = this.getSubTypes.filter(item => item.uptype==id )
                   subTitles.forEach(title => {
-                     let goods = this.getAllGoods.find(item => item.typeId==title.id)
+                     let goods = this.getAllGoods.find(item => item.typeId==title.id && item.price>this.getMin && item.price<this.getMax)
                      if(goods) {
                         arr.push(goods)
                      }
                   })
+                
                   return arr
                }   
             }

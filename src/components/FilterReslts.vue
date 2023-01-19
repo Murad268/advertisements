@@ -41,35 +41,39 @@
          ...mapMutations(['setAdverCount']),
          
          getResults(city, name, filter) {
-            if(city!="bütün_şəhərlər" && name == "bütün_elanlar" && filter == "bütün_kateqoriyalar") {
-               return this.getAllGoods.filter(item => item.city == city  && item.price>this.getMin && item.price<this.getMax);
-            } else if(city!="bütün_şəhərlər" && name!="bütün_elanlar" && filter == "bütün_kateqoriyalar") {
-               return this.getAllGoods.filter(item => item.city==city && item.title.toLowerCase().includes(name.toLowerCase()   && item.price>this.getMin && item.price<this.getMax));
-            } else if(city=="bütün_şəhərlər" && name!="bütün_elanlar" && filter == "bütün_kateqoriyalar") {
-               return this.getAllGoods.filter(item => item.title.toLowerCase().includes(name.toLowerCase()) && item.price>this.getMin && item.price<this.getMax);
-            } else if(city!="bütün_şəhərlər" && name == "bütün_elanlar" && filter == "bütün_kateqoriyalar") {
-               return this.getAllGoods.filter(item => item.title.toLowerCase().includes(name.toLowerCase()) && item.price>this.getMin && item.price<this.getMax);
-            } else {
-               try{
-                  let id = this.getSubTypes.filter(item => item.name == filter)[0].id
-                  if(id) {
-                     return this.getAllGoods.filter(item => item.typeId==id && item.price>this.getMin && item.price<this.getMax)
-                  } else {
-                     return []
-                  }
-               } catch {
-                  let id = this.getTypes.filter(item => item.name == filter)[0].id;
-                  let arr = [];
-                  const subTitles = this.getSubTypes.filter(item => item.uptype==id )
-                  subTitles.forEach(title => {
-                     let goods = this.getAllGoods.find(item => item.typeId==title.id && item.price>this.getMin && item.price<this.getMax)
-                     if(goods) {
-                        arr.push(goods)
+               if(filter) {
+                  if(city!="bütün_şəhərlər" && name == "bütün_elanlar" && filter == "bütün_kateqoriyalar") {
+                  return this.getAllGoods.filter(item => item.city == city  && item.price>this.getMin && item.price<this.getMax);
+               } else if(city!="bütün_şəhərlər" && name!="bütün_elanlar" && filter == "bütün_kateqoriyalar") {
+                  return this.getAllGoods.filter(item => item.city==city && item.title.toLowerCase().includes(name.toLowerCase()   && item.price>this.getMin && item.price<this.getMax));
+               } else if(city=="bütün_şəhərlər" && name!="bütün_elanlar" && filter == "bütün_kateqoriyalar") {
+                  return this.getAllGoods.filter(item => item.title.toLowerCase().includes(name.toLowerCase()) && item.price>this.getMin && item.price<this.getMax);
+               } else if(city!="bütün_şəhərlər" && name == "bütün_elanlar" && filter == "bütün_kateqoriyalar") {
+                  return this.getAllGoods.filter(item => item.title.toLowerCase().includes(name.toLowerCase()) && item.price>this.getMin && item.price<this.getMax);
+               } else {
+                  try{
+                     let id = this.getSubTypes.filter(item => item.name == filter)[0].id
+                     if(id) {
+                        return this.getAllGoods.filter(item => item.typeId==id && item.price>this.getMin && item.price<this.getMax)
+                     } else {
+                        return []
                      }
-                  })
-                
-                  return arr
-               }   
+                  } catch {
+                     let id = this.getTypes.filter(item => item.name == filter)[0].id;
+                     let arr = [];
+                     const subTitles = this.getSubTypes.filter(item => item.uptype==id )
+                     subTitles.forEach(title => {
+                        let goods = this.getAllGoods.find(item => item.typeId==title.id && item.price>this.getMin && item.price<this.getMax)
+                        if(goods) {
+                           arr.push(goods)
+                        }
+                     })
+                  
+                     return arr
+                  }   
+               }
+            } else {
+               return this.getAllGoods.filter(item => item.price>this.getMin && item.price<this.getMax)
             }
          }
       }

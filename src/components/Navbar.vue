@@ -2,9 +2,9 @@
    <div class="navbar">
       <div class="container">
          <div class="navbar__wrapper">
-            <div class="navbar__logo">
+            <router-link to="/" class="navbar__logo">
                tap.az
-            </div>
+            </router-link>
             <div>
                <a class="navbar__catalog">
                   <i class="fa fa-list" aria-hidden="true"></i>
@@ -64,6 +64,9 @@ import { mapGetters } from 'vuex';
    .navbar {
       background: #FF4F08;
       padding: 10px 0;
+      a {
+         text-decoration: none;
+      }
       &__wrapper {
          width: 100%;
          display: flex;

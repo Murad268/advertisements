@@ -3,11 +3,12 @@
          <div class="container">
             <div class="filterPage__wrapper">
                <div class="filterPage__top">  Bütün kateqoriyalar <span class="dot">·</span> <span v-if="$route.params.filter!='bütün_kateqoriyalar'">{{getPrevType}}</span> · <span>{{ getPrevSubType }}</span> </div>
-               <div class="filterPage__bottom">
+               <div v-if="$route.params.filter" class="filterPage__bottom">
                   {{ categoryGet }} <span>({{ getAdverCount }} elan) </span>
-              
                </div>
-              
+               <div v-else class="filterPage__bottom">
+                  Bütün kateqoriyalar <span>({{ getAdverCount }} elan) </span>
+               </div>
             </div>
             <div class="filterPage__footer">
                <div @click.self="setSee" class="filterPage__curr">
@@ -46,7 +47,7 @@
      
      
       computed: {
-         ...mapGetters(['getTypes', 'getSubTypes', "getAdverCount", "getAdverCount"]),
+         ...mapGetters(['getTypes', 'getSubTypes', "getAdverCount"]),
          getPrevType() {
            try {
             let copy = this.getSubTypes
@@ -65,7 +66,11 @@
             }
          },
          categoryGet() {
-            return this.$route.params.filter.replace("_", " ")[0].toUpperCase() + this.$route.params.filter.replace("_", " ").slice(1)
+            try{
+               return this.$route.params.filter.replace("_", " ")[0].toUpperCase() + this.$route.params.filter.replace("_", " ").slice(1)
+            }catch{
+
+            }
          },
          gett() {
             try {

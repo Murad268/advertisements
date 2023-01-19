@@ -6,7 +6,7 @@
       <div v-if="favoritesList.length<=0" class="favEmpty">
          <div>
             <div class="favEmpty__desc">Elanlara daha sonra baxmaq üçün onları seçilmişlər siyahısına əlavə edin</div>
-            <a href="" class="favEmpty__btn">Bütün elanlar</a>
+            <router-link to="elanlar" class="favEmpty__btn">Bütün elanlar</router-link>
          </div>
       </div>
    </div>

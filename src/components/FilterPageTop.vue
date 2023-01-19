@@ -2,10 +2,12 @@
    <div class="filterPage">
          <div class="container">
             <div class="filterPage__wrapper">
-               <div class="filterPage__top">Bütün kateqoriyalar</div>
+               <div class="filterPage__top">  Bütün kateqoriyalar <span class="dot">·</span> <span v-if="$route.params.filter!='bütün_kateqoriyalar'">{{getPrevType}}</span> · <span>{{ getPrevSubType }}</span> </div>
                <div class="filterPage__bottom">
-                  {{ categoryGet }} <span>{{ getAdverCount }}</span>
+                  {{ categoryGet }} <span>({{ getAdverCount }} elan) </span>
+              
                </div>
+              
             </div>
             <div class="filterPage__footer">
                <div @click.self="setSee" class="filterPage__curr">
@@ -41,8 +43,27 @@
          filterPageFilter,
          FilterResltsVue
       }, 
+     
+     
       computed: {
          ...mapGetters(['getTypes', 'getSubTypes', "getAdverCount", "getAdverCount"]),
+         getPrevType() {
+           try {
+            let copy = this.getSubTypes
+            let id = copy.filter(filter => filter.name==this.$route.params.filter)[0].uptype;
+            return this.getTypes.filter(filter => filter.id==id)[0].name;
+           } catch{
+               return this.categoryGet
+           }
+         },
+         getPrevSubType() {
+            try {
+               let copy = this.getSubTypes
+               return copy.filter(filter => filter.name==this.$route.params.filter)[0].name;
+            } catch{
+
+            }
+         },
          categoryGet() {
             return this.$route.params.filter.replace("_", " ")[0].toUpperCase() + this.$route.params.filter.replace("_", " ").slice(1)
          },
@@ -62,7 +83,9 @@
             minMax: {
                min: 1,
                max: 10000000
-            }
+            },
+            prev: "",
+            curr: ""
          }
       },
       methods: {
@@ -78,6 +101,7 @@
 </script>
 
 <style lang="scss" scoped>
+   
    .filterPage {
       padding: 20px 0;
       &__filter {

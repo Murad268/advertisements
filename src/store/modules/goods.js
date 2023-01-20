@@ -96,6 +96,7 @@ export default({
     }
    },
    mutations: {
+    
       setAdverCount(state, count) {
          state.adverCount=count
       },
@@ -126,6 +127,6 @@ export default({
       }
    },
    actions: {
-      
+     
    },
 })

@@ -3,7 +3,6 @@
       <div class="container">
          <div class="types__wrapper">
             <TypeVue :activeSubTypes="activeSubTypes" v-for="typer in getTypes" :key="typer.id" :type="typer"/>
-         
          </div>
          <div  v-if="see" class="typesSubTy">
             <HomeType v-for="i in data" :key="i.id" :i="i"/>
@@ -70,9 +69,7 @@
             row-gap: 10px;
             width: 100%;
             height: max-content;
-            background: white;
-         
-           
+            background: white;  
          }
    .types {
       &__wrapper {

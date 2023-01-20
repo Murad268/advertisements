@@ -33,7 +33,6 @@
          activeSubTypes(e, id) {
        
             if(e.target.parentNode.classList["value"].includes("activedClass")) {
-               console.log('aa')
                e.target.parentNode.classList.remove("activedClass")
                this.see=false
             } else {

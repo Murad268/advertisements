@@ -36,4 +36,3 @@ function getAllImages(state, goodId) {
    return state.find(item=>item.goodId==goodId);
  }
 
- console.log(getAllImages(show, 1).src)

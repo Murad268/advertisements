@@ -30,10 +30,16 @@ const routes = [
     name: 'elan',
 
     component: () => import(/* webpackChunkName: "about" */ '../views/OneAdv.vue')
-  }
+  },
+  
 ]
 
+
 const router = createRouter({
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 0 }
+  },
   history: createWebHistory(process.env.BASE_URL),
   routes
 })

@@ -54,7 +54,6 @@
       padding: 20px;
       &__desc {
          margin-top: 30px;
-         width: 800px;
          text-align: justify;
          line-height: 22px;
          font-size: 20px;

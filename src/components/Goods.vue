@@ -1,13 +1,12 @@
 <template>
-   <div class="goods">
+   <router-link :to="{name: 'elan', params: {type: typeGet.name, subtype: subTypeGet.name, id: goods.id}}" class="goods">
       <div class="goods__top">
-         <i v-if="goods.fav" @click="delled(goods.id)" class="fa fa-heart addedFav"   aria-hidden="true"></i>
-         <i v-else @click="added(goods.id, goods)" class="fa-regular fa-heart favor"  aria-hidden="true"></i>
+         <i v-if="goods.fav" @click.prevent="delled(goods.id)" class="fa fa-heart addedFav"   aria-hidden="true"></i>
+         <i v-else @click.prevent="added(goods.id, goods)" class="fa-regular fa-heart favor"  aria-hidden="true"></i>
          <i v-if="goods.status=='vip'" class="fas fa-crown crown"></i>
          <img :src="require('../assets/goods/'+ getAllImages.find(item=>item.goodId==goods.id).src)" alt="">
          <div  v-if="goods.shop" class="goods__shop">
             Mağaza
-           
          </div>
          <div class="goods__bottom">
             <div class="goods__bottom__price">
@@ -17,7 +16,7 @@
          </div>
       </div>
       <div class="goods__bottom__time">{{ goods.city }}, {{retDate}}</div>
-   </div>
+   </router-link>
 </template>
 
 <script>
@@ -38,9 +37,15 @@
          }
       },
       computed: {
-         ...mapGetters(['getAllImages', 'favoritesList']),
+         ...mapGetters(['getAllImages', 'favoritesList', 'getSubTypes', 'getTypes']),
          currency() {
             return this.goods.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+         },
+         typeGet() {
+            return this.getTypes.filter(item => item.id == this.subTypeGet.uptype)[0];
+         },
+         subTypeGet() {
+            return this.getSubTypes.filter(item => item.id == this.goods.typeId)[0];
          },
          retDate() {
             let year = String(new Date(this.goods.date).getFullYear());
@@ -116,6 +121,7 @@
       height: 300px;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       border-radius: 10px;
+      text-decoration: none;
       &__shop {
          background: #4E63BE;
          display: flex;

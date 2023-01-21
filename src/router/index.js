@@ -24,6 +24,12 @@ const routes = [
     name: 'elanlar',
 
     component: () => import(/* webpackChunkName: "about" */ '../views/FilterPage.vue')
+  },
+  {
+    path: '/elanlar/:type/:subtype/:id',
+    name: 'elan',
+
+    component: () => import(/* webpackChunkName: "about" */ '../views/OneAdv.vue')
   }
 ]
 

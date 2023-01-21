@@ -23,8 +23,9 @@
          <hr v-if="getInfo.delivery">
       </div>
       <div class="addoneabout__desc">
-       
-         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, animi deserunt! Aperiam recusandae itaque libero blanditiis voluptatum aliquam quae id quos cumque architecto rem, neque fugiat rerum asperiores! Eveniet dolores repudiandae porro magnam excepturi adipisci culpa fuga totam ab, necessitatibus, voluptatum mollitia reprehenderit voluptatibus.
+         <pre>
+            {{getDesc}}
+         </pre>
       </div>
    </div>
 </template>
@@ -34,12 +35,15 @@
    export default {
       name: "AddOneAboutVue",
       computed: {
-         ...mapGetters(['getAllGoods', 'getSubTypes']),
+         ...mapGetters(['getAllGoods', 'getSubTypes', 'getAllDescs']),
          getInfo() {
             return this.getAllGoods.filter(item => item.id == this.$route.params.id)[0]
          },
          getType() {
             return this.getSubTypes.filter(item => item.id == this.$route.params.id)[0];
+         },
+         getDesc() {
+            return this.getAllDescs.filter(desc => desc.goodId == this.$route.params.id)[0].desc
          }
       }
    }
@@ -50,8 +54,10 @@
       padding: 20px;
       &__desc {
          margin-top: 30px;
-         width: 600px;
+         width: 800px;
          text-align: justify;
+         line-height: 22px;
+         font-size: 20px;
       }
       hr {
          margin-top: 6px;

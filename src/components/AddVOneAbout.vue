@@ -75,7 +75,7 @@
          }
          &__desc {
             font-weight: bold;
-            width: 200px;
+            width: 250px;
             font-size: 18px;
          }
       }

@@ -2,7 +2,9 @@
    <div class="filterPage">
          <div class="container">
             <div class="filterPage__wrapper">
-               <div class="filterPage__top">  Bütün kateqoriyalar <span class="dot">·</span> <span v-if="$route.params.filter!='bütün_kateqoriyalar'">{{getPrevType}}</span> · <span>{{ getPrevSubType }}</span> </div>
+
+               <router-link v-if="$route.params.filter" :to="{name: 'elanlar'}">Bütün kateqoriyalar</router-link> <router-link  :to="{name: 'goods', params: {city: 'bütün_şəhərlər', name: 'bütün_elanlar', filter: getPrevType}}" v-if="$route.params.filter&&$route.params.filter!='bütün_kateqoriyalar'"> • {{getPrevType}} </router-link> <router-link v-if="$route.params.filter" :to="{name: 'goods', params: {city: 'bütün_şəhərlər', name: 'bütün_elanlar', filter: getPrevType}}"> <span v-if="getPrevSubType&&getPrevSubType.length>0">•</span> {{getPrevSubType }}</router-link> 
+               <router-link v-else :to="{name: 'elanlar'}">Bütün kateqoriyalar</router-link>
                <div v-if="$route.params.filter" class="filterPage__bottom">
                   {{ categoryGet }} <span>({{ getAdverCount }} elan) </span>
                </div>
@@ -108,6 +110,11 @@
 <style lang="scss" scoped>
    
    .filterPage {
+      a {
+            color: gray;
+            text-decoration: none;
+            font-size: 17px;
+      }
       padding: 20px 0;
       &__filter {
          padding: 10px;
@@ -119,6 +126,7 @@
       &__top {
          color: gray;
          font-size: 17px;
+        
       }
       &__bottom {
          font-size: 19px;

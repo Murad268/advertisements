@@ -47,11 +47,13 @@
          openModal(e) {
             this.img = e.target.src
             document.documentElement.style.overflow = 'hidden'
+            document.querySelector('html').style.padding = '0 17px 0 0'
             this.see = true
          },
          closeModal() {
             this.see = false
             document.documentElement.style.overflow = 'auto'
+            document.querySelector('html').style.padding = '0'
          }
       }
    }

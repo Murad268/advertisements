@@ -30,19 +30,16 @@
             img: ""
          }
       },
-      created() {
-         console.log(this.imgs.length) 
-      },
       computed: {
          ...mapGetters(['getAllImages']),
-         imgs() { return this.getAllImages.filter(item => item.goodId == this.$route.params.id)},  
+      
+         imgs() { return this.getAllImages.filter(item => item.goodId == this.$route.params.id).slice(1)},  
          className(){
             return this.imgs.length<=1?"photo__others__one":
             this.imgs.length<=2?"photo__others__two":
             this.imgs.length<=3?"photo__others__three":
             this.imgs.length<=4?"photo__others__four":
-            this.imgs.length>4?"photo__others__five":
-            this.imgs.length<=6?"photo__others":""
+            this.imgs.length>4?"photo__others":""
           
           }
       },
@@ -116,9 +113,15 @@
       }
       &__others {
          display: grid;
-         column-gap: 10px;
+         grid-gap: 10px;
          height: max-content;
          grid-template-columns: repeat(5, 1fr);
+         img {
+               width: 100%;
+               object-fit: fill;
+               height: 60px;
+               cursor: pointer;
+         }
          &__one {
             display: grid;
             column-gap: 10px;
@@ -127,62 +130,43 @@
             img {
                height: 300px;
                object-fit: fill;
+               cursor: pointer;
             }
          }
          &__two {
             display: grid;
             column-gap: 10px;
             grid-template-columns: repeat(2, 1fr);
+            img {
+               width: 100%;
+               object-fit: fill;
+               height: 300px;
+               cursor: pointer;
+           
+            }
          }
          &__three {
             display: grid;
             column-gap: 10px;
             grid-template-columns: repeat(3, 1fr);
+            img {
+               width: 100%;
+               object-fit: fill;
+               height: 200px;
+               cursor: pointer;
+           
+            }
          }
          &__four {
             display: grid;
             column-gap: 10px;
             grid-template-columns: repeat(4, 1fr);
-         }
-         &__five {
-            display: grid;
-            grid-gap: 10px;
-            grid-template-columns: repeat(5, 1fr);
-            
-         }
-         &__six {
-            display: grid;
-            column-gap: 10px;
-            grid-template-columns: repeat(6, 1fr);
-         }
-         &__seven {
-            display: grid;
-            column-gap: 10px;
-            grid-template-columns: repeat(7, 1fr);
+            img {
+               height: 100px;
+               object-fit: fill;
+            }
          }
      
-         &__eight {
-            display: grid;
-            column-gap: 10px;
-            grid-template-columns: repeat(8, 1fr);
-         }
-         &__nine {
-            display: grid;
-            column-gap: 10px;
-            grid-template-columns: repeat(9, 1fr);
-         }
-         &__ten {
-            display: grid;
-            column-gap: 10px;
-            grid-template-columns: repeat(10, 1fr);
-         }
-         img {
-            width: 100%;
-            object-fit: fill;
-            height: 60px;
-            cursor: pointer;
-           
-         }
       }
    }
 </style>

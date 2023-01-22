@@ -1,4 +1,5 @@
 <template>
+   <AddVPhoto/>
    <div class="container">
       <OneAdvTop/>
       <AddVAbout/>
@@ -8,11 +9,13 @@
 <script>
    import OneAdvTop from '@/components/OneAdvTop.vue';
    import AddVAbout from '@/components/AddVAbout.vue';
+   import AddVPhoto from '@/components/AddVPhoto.vue';
    export default {
       name: "OneAdv",
       components: {
          OneAdvTop,
-         AddVAbout
+         AddVAbout,
+         AddVPhoto
       }
    }
 </script>

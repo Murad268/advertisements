@@ -2,7 +2,6 @@
    <div class="filterPage">
          <div class="container">
             <div class="filterPage__wrapper">
-
                <router-link v-if="$route.params.filter" :to="{name: 'elanlar'}">Bütün kateqoriyalar</router-link> <router-link  :to="{name: 'goods', params: {city: 'bütün_şəhərlər', name: 'bütün_elanlar', filter: getPrevType}}" v-if="$route.params.filter&&$route.params.filter!='bütün_kateqoriyalar'"> • {{getPrevType}} </router-link> <router-link v-if="$route.params.filter" :to="{name: 'goods', params: {city: 'bütün_şəhərlər', name: 'bütün_elanlar', filter: getPrevType}}"> <span v-if="getPrevSubType&&getPrevSubType.length>0">•</span> {{getPrevSubType }}</router-link> 
                <router-link v-else :to="{name: 'elanlar'}">Bütün kateqoriyalar</router-link>
                <div v-if="$route.params.filter" class="filterPage__bottom">
@@ -47,7 +46,9 @@
          FilterResltsVue
       }, 
      
-     
+     created() {
+      console.log(this.getAdverCount)
+     },
       computed: {
          ...mapGetters(['getTypes', 'getSubTypes', "getAdverCount"]),
          getPrevType() {

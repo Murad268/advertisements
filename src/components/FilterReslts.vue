@@ -3,6 +3,9 @@
       <AddV :fl="vipResults" status="vip"/>
       <AddV :fl="lastResults" status="last"/>   
    </div>
+   <div v-if="see<allGoods" class="filterReslts__pagination">
+      <a-pagination @change="changePage"  :pageSize="see" :total="allGoods" />
+   </div>
 </template>
 
 <script>
@@ -14,15 +17,28 @@
       components: {
          AddV
       },
+      data() {
+         return {
+            from: 0,
+            offsite: 4,
+            see: 4
+         }
+      },
+      created() {
+         this.setAdverCount(this.getResults(this.$route.params.city, this.$route.params.name, this.$route.params.filter).length)
+      },
       updated() {
          this.setAdverCount(this.getResults(this.$route.params.city, this.$route.params.name, this.$route.params.filter).length)
       },
       computed: {
          ...mapGetters(['getAllGoods', 'getSubTypes', 'getTypes', 'getMin', 'getMax']),
+         allGoods() {
+            return this.getResults(this.$route.params.city, this.$route.params.name, this.$route.params.filter).length
+         },
          vipResults() {
             let arr = this.getResults(this.$route.params.city, this.$route.params.name, this.$route.params.filter)
             if(arr) {
-               return this.getResults(this.$route.params.city, this.$route.params.name, this.$route.params.filter).filter(item => item.status=="vip");
+               return this.getResults(this.$route.params.city, this.$route.params.name, this.$route.params.filter).filter(item => item.status=="vip").slice(0, 10);
             } else {
          
             }
@@ -30,7 +46,7 @@
          lastResults() {
             let copy = this.getResults(this.$route.params.city, this.$route.params.name, this.$route.params.filter)
             if(copy) {
-               return copy.sort((a, b) => b.date-a.date);
+               return copy.sort((a, b) => b.date-a.date).slice(this.from, this.offsite);
             } else {
 
             }
@@ -39,7 +55,10 @@
       },
       methods: {
          ...mapMutations(['setAdverCount']),
-         
+         changePage(page) {
+            this.from = (page-1)*this.see
+            this.offsite=this.from+this.see
+         },
          getResults(city, name, filter) {
                if(filter) {
                   if(city!="bütün_şəhərlər" && name == "bütün_elanlar" && filter == "bütün_kateqoriyalar") {
@@ -83,5 +102,11 @@
 <style lang="scss" scoped>
    .filterReslts {
       margin-top: 40px;
+      &__pagination {
+         width: max-content;
+         margin: 0 auto;
+         margin-top: 30px;
+      
+      }
    }
 </style>

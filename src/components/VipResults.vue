@@ -11,7 +11,7 @@
          <GoodsVue v-for="goods in getVipGoods" :key="goods.id" :goods="goods"/>
       </div>
    </div>
-   <div class="VipPgeResults__pagination">
+   <div v-if="getSee<getVipCount" class="VipPgeResults__pagination">
       <a-pagination @change="changePage"  :pageSize="getSee" :total="getVipCount" />
    </div>
    
@@ -24,7 +24,6 @@
     
       name: 'VipResults',
       components: {
-
          GoodsVue
       },
       created() {

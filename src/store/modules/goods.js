@@ -1,8 +1,8 @@
 export default({
    state: {
       from: 0,
-      offsite: 4,
-      see: 4,
+      offsite: 10,
+      see: 10,
       min: 1,
       max: 1000000,
       adverCount: 0,
@@ -112,11 +112,8 @@ export default({
    },
    mutations: {
       changePages(state, data) {
-
          state.from = (data.from-1)*state.see
-                 
          state.offsite=state.from+state.see
-         console.log(state.goods.filter(item => item.status=="vip").slice(state.from, state.offsite))
       },
       setAdverCount(state, count) {
          state.adverCount=count

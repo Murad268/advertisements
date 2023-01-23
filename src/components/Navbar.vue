@@ -16,6 +16,7 @@
                   <div>
                      <input v-model="name" type="text">
                      <select v-model="city" class="city__select" name="" id="">
+                        <option value="">Şəhər</option>
                         <City v-for="city in allCities" :key="city.id" :city="city"/>
                      </select>
                   </div>
@@ -46,7 +47,6 @@
                      </div>
                   </div>
                   </div>
-        
                   <div :class="getTypes.length>13?'navbar__categories__right__yes':'navbar__categories__right'" v-if="see" >
                      <div @click="click"  v-for="i in data" :key="i.id" class="navbar__categories__right__el">
                         <router-link :to="{name: 'goods', params: {city: 'bütün__şəhərlər', name: 'bütün_elanlar', filter: i.name}}">{{ i.name }}</router-link>
@@ -54,7 +54,6 @@
                   </div>
             </div>
          </div>
-
       </div>
    </nav>
 </template>
@@ -93,7 +92,11 @@ import { mapGetters } from 'vuex';
             this.data = this.getSubTypes.filter(item => item.uptype == id)
          },
          goGoods() {
-            this.$router.push({ name: 'goods', params: { city: this.city?this.city:"bütün_şəhərlər", name: this.name?this.name:"bütün_elanlar", filter: 'bütün_kateqoriyalar'} })
+            if(this.city == "" && this.name == "") {
+               this.$router.push({name: "elanlar"});
+            } else {
+               this.$router.push({ name: 'goods', params: { city: this.city?this.city:"bütün_şəhərlər", name: this.name?this.name:"bütün_elanlar", filter: 'bütün_kateqoriyalar'} })
+            }
          }
       }
    }

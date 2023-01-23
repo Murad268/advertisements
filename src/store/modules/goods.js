@@ -37,7 +37,7 @@ export default({
          {id: 28, marka: "", new: "", delivery: true, typeId: 85, views: 754, fav: false, city: "Balakən", shop: false, title: "Haski", price: 40, date: "2022-07-08 02:30", src: "", status: "vip"},
          {id: 29, marka: "", new: "", delivery: "", typeId: 89, views: 280, fav: false, city: "Qax", shop: true, title: "İnək", price: 1800 , date: "2021-09-12 04:21", src: "", status: "ad"},
          {id: 30, marka: "", new: "", delivery: "", typeId: 91, views: 321, fav: false, city: "Bakı", shop: true, title: "Avtoyuyucu tələb olunur", price: 30 , date: "2021-01-01 02:11", src: "", status: "ad"},
-         {id: 31, marka: "", new: "", delivery: "",  typeId: 92, views: 221, fav: false, city: "Bakı", shop: true, title: "Dayə işi axtarıram", price: 400 , date: "2022-27-11 07:30", src: "", status: "ad"}
+         {id: 31, marka: "", new: "", delivery: "",  typeId: 92, views: 221, fav: false, city: "Bakı", shop: true, title: "Dayə işi axtarıram", price: 400 , date: "2022-11-27 07:30", src: "", status: "ad"}
       ],
       goodImages: [
          {id: 1, goodId: 1, src: "id1-1.png"},

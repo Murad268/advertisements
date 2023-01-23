@@ -20,8 +20,8 @@
       data() {
          return {
             from: 0,
-            offsite: 4,
-            see: 4
+            offsite: 10,
+            see: 10
          }
       },
       created() {
@@ -62,14 +62,18 @@
          getResults(city, name, filter) {
                if(filter) {
                   if(city!="bütün_şəhərlər" && name == "bütün_elanlar" && filter == "bütün_kateqoriyalar") {
+                     console.log(1)
                   return this.getAllGoods.filter(item => item.city == city  && item.price>this.getMin && item.price<this.getMax);
                } else if(city!="bütün_şəhərlər" && name!="bütün_elanlar" && filter == "bütün_kateqoriyalar") {
-                  return this.getAllGoods.filter(item => item.city==city && item.title.toLowerCase().includes(name.toLowerCase()   && item.price>this.getMin && item.price<this.getMax));
+                  return this.getAllGoods.filter(item => item.city==city && item.title.toLowerCase().includes(name.toLowerCase()) && item.price>this.getMin && item.price<this.getMax);
                } else if(city=="bütün_şəhərlər" && name!="bütün_elanlar" && filter == "bütün_kateqoriyalar") {
+                  console.log(3)
                   return this.getAllGoods.filter(item => item.title.toLowerCase().includes(name.toLowerCase()) && item.price>this.getMin && item.price<this.getMax);
                } else if(city!="bütün_şəhərlər" && name == "bütün_elanlar" && filter == "bütün_kateqoriyalar") {
+                  console.log(4)
                   return this.getAllGoods.filter(item => item.title.toLowerCase().includes(name.toLowerCase()) && item.price>this.getMin && item.price<this.getMax);
                } else {
+                  console.log(5)
                   try{
                      let id = this.getSubTypes.filter(item => item.name == filter)[0].id
                      if(id) {

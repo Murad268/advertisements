@@ -1,6 +1,8 @@
 export default({
    state: {
-      offsite: 10,
+      from: 0,
+      offsite: 4,
+      see: 4,
       min: 1,
       max: 1000000,
       adverCount: 0,
@@ -78,18 +80,25 @@ export default({
       ]
    },
    getters: {
+    getSee(state) {
+      return state.see
+    },
     getVipGoods(state) {
-      return state.goods.filter(item => item.status=="vip").splice(0, state.offsite);
+      return [...state.goods.filter(item => item.status=="vip").slice(state.from, state.offsite)];
+    },
+    getVipCount(state) {
+      return state.goods.filter(item => item.status=="vip").length
     },
     getLastGoods(state) {
       let copy = [...state.goods];
-      return copy.sort((a, b) => b.date-a.date).splice(0, state.offsite);
+      return copy.sort((a, b) => b.date-a.date).splice(state.from, state.offsite);
     },
     getAllImages(state) {
       return state.goodImages;
     },
     getAllGoods(state) {
-      return state.goods
+      let copy = [...state.goods];
+      return copy.sort((a, b) => b.date-a.date)
     },
     getMin(state) {
       return state.min
@@ -102,6 +111,13 @@ export default({
     }
    },
    mutations: {
+      changePages(state, data) {
+
+         state.from = (data.from-1)*state.see
+                 
+         state.offsite=state.from+state.see
+         console.log(state.goods.filter(item => item.status=="vip").slice(state.from, state.offsite))
+      },
       setAdverCount(state, count) {
          state.adverCount=count
       },

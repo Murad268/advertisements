@@ -31,7 +31,12 @@ const routes = [
 
     component: () => import(/* webpackChunkName: "about" */ '../views/OneAdv.vue')
   },
-  
+  {
+    path: '/elanlar/vip',
+    name: 'vip',
+
+    component: () => import(/* webpackChunkName: "about" */ '../views/VipPage.vue')
+  },
 ]
 
 

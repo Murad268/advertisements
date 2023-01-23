@@ -2,7 +2,7 @@
    <div class="container">
       <div class="con__wrapper">
          <div>{{ status=='vip'?"VIP ELANLAR":status=='last'?"SON ELANLAR":"ELANLAR" }}</div>
-         <a href="">{{ status=='vip'?"Bütün VİP elanlar":status=='last'?"Bütün elanlar":"Bütün elanlar"}}</a>
+         <router-link to="elanlar/vip" >{{ status=='vip'?"Bütün VİP elanlar":status=='last'?"Bütün elanlar":"Bütün elanlar"}}</router-link>
       </div>
       <div v-if="status=='vip'" class="goods__wrapper">
          <GoodsVue v-for="goods in fl" :key="goods.id" :goods="goods"/>

@@ -70,7 +70,7 @@
       </div>
    </nav>
    <nav class="nav__min__wrapper container">
-      <div class="nav__min__menuBtn">
+      <div @click="activeMenu" class="nav__min__menuBtn">
          <i class="fa fa-list" aria-hidden="true"></i>
       </div>
       <router-link to="/" class="navbar__min__center">tap.az</router-link>
@@ -81,20 +81,64 @@
          <i class="fa fa-plus" aria-hidden="true"></i>
       </div>
    </nav>
+   <div :class="[className]" class="navbar__menu">
+      <div class="navbar__menu__top">
+         <div class="navbar__menu__top__h">
+            tap.az
+         </div>   
+         <div class="navbar__menu__top__exit">
+            <i @click="closeMenu" class="fa fa-close"></i>
+         </div>
+      </div>
+      <hr>
+      <div class="navbar__menu__body">
+         <div class="navbar__menu__body__links">
+            <div class="navbar__menu__body__link">
+               <i class="fa fa-user" aria-hidden="true"></i>
+               <a>Giriş</a>
+            </div>
+            <hr>
+            <div class="navbar__menu__body__link">
+               <i class="fa fa-heart" aria-hidden="true"></i>
+               <a>Seçilmişlər</a>
+            </div>
+            <hr>
+         </div>
+         <div class="navbar__menu__body__footer">
+            <div class="navbar__menu__body__footer__link">
+               <a href="">İstifadəçi razılaşması</a>
+            </div>
+            <hr>
+            <div class="navbar__menu__body__footer__link">
+               <a href="">Elan yerləşdirmə qaydaları</a>
+            </div>
+            <hr>
+            <div class="navbar__menu__body__footer__link">
+               <a href="">Məxfilik siyasəti</a>
+            </div>
+            <hr>
+            <div class="navbar__menu__body__footer__link">
+               <a href="">Saytda reklam</a>
+            </div>
+         </div>
+      </div>
+   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
    import City from './City.vue';
    export default {
-
       name: "NavbarVue",
       components: {
          City
       },
  
       computed: {
-         ...mapGetters(["allCities", "getTypes", "getSubTypes"])
+         ...mapGetters(["allCities", "getTypes", "getSubTypes"]),
+         className() {
+            return this.left?'navbar__menu__active':""
+         }
       },
       data() {
          return {
@@ -104,7 +148,8 @@ import { mapGetters } from 'vuex';
             seeCatMenu: false,
             data: [],
             navbarSee: true,
-            minSee: false
+            minSee: false,
+            left: false
          }
       },
       created() {
@@ -114,6 +159,12 @@ import { mapGetters } from 'vuex';
          }
       },
       methods: {
+         activeMenu() {
+            this.left = true
+         },
+         closeMenu() {
+            this.left = false
+         },
          click() {
             this.seeCatMenu=false
          },
@@ -136,6 +187,7 @@ import { mapGetters } from 'vuex';
 </script>
 
 <style lang="scss" scoped>
+
    .nav__min__wrapper {
       .nav__min__menuBtn {
          margin-top: 7px;
@@ -181,6 +233,57 @@ import { mapGetters } from 'vuex';
       background: #FF4F08;
       padding: 10px 0;
       position: relative;
+      &__menu {
+         width: 80%;
+         height: 100vh;
+         position: fixed;
+         top: 0;
+         left: -100%;
+         background: #F8F9FD;
+         z-index: 100;
+         padding: 20px;
+         transition: 0.4s;
+         &__active {
+            left: 0;
+            transition: 0.4s;
+         }
+         &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &__h {
+               font-weight: bold;
+               font-size: 30px;
+            }
+            &__exit {
+               i {
+                  font-size: 30px;
+                  color: gray;
+                  cursor: pointer;
+               }
+            }
+         } 
+        
+         &__body {
+            &__link {
+               i {
+                  color: gray;
+                  margin-right: 10px;
+               }
+               a {
+                  color: black
+               }
+            }
+            &__footer {
+               &__link {
+                  a {
+                     color: black;
+                     margin-right: 10px;
+                  }
+               }
+            }
+         }
+      }
       &__min__wrapper {
          display: none;
       }

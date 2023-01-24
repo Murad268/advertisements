@@ -100,7 +100,7 @@
             <hr>
             <div class="navbar__menu__body__link">
                <i class="fa fa-heart" aria-hidden="true"></i>
-               <a>Seçilmişlər</a>
+               <router-link to="/favorites">Seçilmişlər</router-link>
             </div>
             <hr>
          </div>

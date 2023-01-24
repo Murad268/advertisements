@@ -1,7 +1,5 @@
 <template>
-
-   <nav v-if="navbarSee" class="navbar">
-      
+   <nav v-if="navbarSee" class="navbar"> 
       <div class="container">
          <div class="navbar__wrapper">
             <router-link to="/" class="navbar__logo">
@@ -33,7 +31,7 @@
             <div class="navbar__min__search">
                <div class="navbar__min__search__block">
                   <form @submit.prevent='goGoods'>
-                     <input type="text">
+                     <input placeholder="Əşya və ya xidmət anlayışı" type="text">
                      <i type="submit" class="fa fa-search" aria-hidden="true"></i>
                      <select>
                         <option value="">Şəhər</option>
@@ -75,7 +73,10 @@
       <div class="nav__min__menuBtn">
          <i class="fa fa-list" aria-hidden="true"></i>
       </div>
-      <div class="navbar__min__center">tap.az</div>
+      <router-link to="/" class="navbar__min__center">tap.az</router-link>
+      <form @submit.prevent='goGoods' action="">
+         <input placeholder="Əşya və ya xidmət anlayışı" type="text">
+      </form>
       <div class="navbar__min__add">
          <i class="fa fa-plus" aria-hidden="true"></i>
       </div>
@@ -136,6 +137,19 @@ import { mapGetters } from 'vuex';
 
 <style lang="scss" scoped>
    .nav__min__wrapper {
+      .nav__min__menuBtn {
+         margin-top: 7px;
+      }
+      input {
+         border: none;
+         height: 35px;
+         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+         border-radius: 10px;
+         outline: none;
+         color: gray;
+         padding-left: 10px;
+         width: 300px;
+      }
       padding: 20px 0;
       display: flex;
       justify-content: space-between;

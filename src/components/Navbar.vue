@@ -367,7 +367,22 @@ import { mapGetters } from 'vuex';
          
          }
       }
-
-   }
-
+   
+}
+      @media (max-width: 568px) {
+         .nav__min__wrapper {
+            padding: 0 20px;
+            input {
+               width: 240px;
+            }
+         }
+      }
+   
+      @media (max-width: 478px) {
+         .nav__min__wrapper {
+            form {
+               display: none;
+            }
+         }
+      }
 </style>

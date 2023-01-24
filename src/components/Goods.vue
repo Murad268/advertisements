@@ -200,9 +200,21 @@
    }
    @media (max-width: 991px) {
       .goods {
-         height: 230px;
+         height: 280px;
          &__top {
-            height: 130px;
+            height: 170px;
+         }
+         &__bottom__time {
+            font-size: 11px;
+         }
+      }
+   }
+
+   @media (max-width: 768px) {
+      .goods {
+         height: 260px;
+         &__top {
+            height: 150px;
          }
          &__bottom__time {
             font-size: 11px;

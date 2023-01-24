@@ -30,7 +30,7 @@
                </div>
             </div>
          </div>
-         <div class="footer__cities">
+         <div v-if="cities" class="footer__cities">
             <FootCity v-for="city in allCities" :city="city" :key="city.key"/>
          </div>
          <div v-show="links" class="footer__links">
@@ -51,7 +51,7 @@
             </a>
          </div>
       </div>
-      <div class="footer__bottom">
+      <div v-if="footer" class="footer__bottom">
          <div class="container">
             <div class="footer__bottom__wrapper">
                <div class="footer__bottom__left">
@@ -59,10 +59,18 @@
                </div>
                <div class="footer__bottom__right">
                   <div>© 2008-2023 Digital Classifieds MMC. VÖEN: 1405631661</div>
-                  <div><a href="">Mobil versiyası</a></div>
+                  
                </div>
             </div>
          </div>
+      </div>
+      <div v-if="minFoot" class="minFoot">
+            <div>
+               Saytın Administrasiyası reklam bannerlərinin və yerləşdirilmiş elanların məzmununa görə məsuliyyət daşımır.
+            </div>
+            <div>
+               © 2008-2023 Digital Classifieds MMC. VÖEN: 1405631661
+            </div>
       </div>
    </div>
 </template>
@@ -77,12 +85,24 @@
       },
       data() {
          return {
-            links: true
+            links: true,
+            cities: true,
+            footer: true,
+            minFoot: false
          }
       },
       created() {
          if(window.innerWidth<768) {
             this.links=false
+         }
+         if(window.innerWidth<568) {
+            this.links=false
+            this.cities=false
+     
+         }
+         if(window.innerWidth<450) {
+            this.footer=false
+            this.minFoot=true
          }
       },
       computed: {
@@ -206,6 +226,40 @@
          align-items: flex-start;
          justify-content: space-between;
          height: 60px;
+      }
+   }
+   @media (max-width: 500px) {
+      .footer__bottom__right {
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: space-between;
+         height: 35px;
+      }
+      .footer__bottom__wrapper {
+         height: 80px;
+      }
+   }
+   @media (max-width: 450px) {
+      .minFoot {
+         margin-top: 20px;
+         display: flex;
+         flex-direction: column;
+         height: 120px;
+         justify-content: space-between;
+         color: gray;
+         padding: 20px 10px;
+         font-size: 12px;
+      }
+      .footer__wrapper {
+         justify-content: flex-start;
+      }
+      .footer__right {
+         font-size: 14px;
+         justify-content: flex-start;
+         div {
+            margin-right: 10px;
+            justify-content: flex-start;
+         }
       }
    }
 </style>

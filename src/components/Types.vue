@@ -31,7 +31,6 @@
       },
       methods: {
          activeSubTypes(e, id) {
-       
             if(e.target.parentNode.classList["value"].includes("activedClass")) {
                e.target.parentNode.classList.remove("activedClass")
                this.see=false
@@ -46,9 +45,6 @@
                e.target.parentNode.classList.add("activedClass")
                this.see=true
             }
-       
-
-
             this.data = this.getSubTypes.filter(item => item.uptype==id)
          }
       },
@@ -78,8 +74,29 @@
          column-gap: 60px;
          row-gap: 20px;
          position: relative;
-     
       }
-    
+   }
+   @media (max-width: 991px) {
+      .types__wrapper {
+         grid-template-columns: repeat(4, 1fr);
+      }
+   }
+   @media (max-width: 556px) {
+      .types__wrapper {
+         grid-template-columns: repeat(5, 1fr);
+         grid-gap: 10px;
+      }
+   }
+   @media (max-width: 432px) {
+      .types__wrapper {
+         grid-template-columns: repeat(4, 1fr);
+         grid-gap: 10px;
+      }
+   }
+   @media (max-width: 332px) {
+      .types__wrapper {
+         grid-template-columns: repeat(3, 1fr);
+         grid-gap: 10px;
+      }
    }
 </style>

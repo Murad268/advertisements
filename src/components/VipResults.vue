@@ -70,4 +70,36 @@
          margin-top: 30px;
       }
    }
+   @media (max-width: 991px) {
+    
+      .VipPgeResults__wrapper {
+         grid-template-columns: repeat(3, 1fr);
+         grid-gap: 50px;
+      }
+      @media (max-width: 768px) {
+      .VipPgeResults__wrapper {
+         grid-template-columns: repeat(3, 1fr);
+         column-gap: 10px;
+      }
+   }
+      @media (max-width: 556px) {
+         .VipPgeResults__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 12%;
+         }
+         .VipPgeResults__title {
+            font-size: 20px;
+            color: black
+         }
+      }
+   }
+   @media (max-width: 412px) {
+      .VipPgeResults__wrapper {
+         grid-template-columns: repeat(2, 1fr);
+         column-gap: 10px;
+      }
+      .VipPgeResults__title {
+            font-size: 15px;
+         }
+   }
 </style>

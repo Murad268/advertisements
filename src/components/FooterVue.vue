@@ -33,7 +33,7 @@
          <div class="footer__cities">
             <FootCity v-for="city in allCities" :city="city" :key="city.key"/>
          </div>
-         <div class="footer__links">
+         <div v-show="links" class="footer__links">
             <a href="" class="footer__link">
                Layihə haqqında
             </a>
@@ -74,6 +74,16 @@
       name: "FooterVue",
       components: {
          FootCity
+      },
+      data() {
+         return {
+            links: true
+         }
+      },
+      created() {
+         if(window.innerWidth<768) {
+            this.links=false
+         }
       },
       computed: {
          ...mapGetters(["allCities"])
@@ -178,6 +188,24 @@
             justify-content: space-between;
             align-items: center;
          }
+      }
+   }
+   @media (max-width: 991px) {
+      .footer__left {
+         margin-bottom: 20px;
+      }
+   
+      .footer__wrapper, .footer__left {
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: space-between;
+         height: 100px;
+      }
+      .footer__bottom__wrapper {
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: space-between;
+         height: 60px;
       }
    }
 </style>

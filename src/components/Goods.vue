@@ -198,4 +198,15 @@
          }
       }
    }
+   @media (max-width: 991px) {
+      .goods {
+         height: 230px;
+         &__top {
+            height: 130px;
+         }
+         &__bottom__time {
+            font-size: 11px;
+         }
+      }
+   }
 </style>

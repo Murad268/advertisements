@@ -1,5 +1,7 @@
 <template>
-   <nav class="navbar">
+
+   <nav v-if="navbarSee" class="navbar">
+      
       <div class="container">
          <div class="navbar__wrapper">
             <router-link to="/" class="navbar__logo">
@@ -28,10 +30,23 @@
                  </div>
                </div>
             </div>
+            <div class="navbar__min__search">
+               <div class="navbar__min__search__block">
+                  <form @submit.prevent='goGoods'>
+                     <input type="text">
+                     <i type="submit" class="fa fa-search" aria-hidden="true"></i>
+                     <select>
+                        <option value="">Şəhər</option>
+                        <City v-for="city in allCities" :key="city.id" :city="city"/>
+                     </select>
+                  </form>
+               </div>
+            </div>
             <div class="navbar__add">
                <a class="btn btn-success" href=""><i class="fa-solid fa-plus"></i> Yeni elan</a>
             </div>
          </div>
+      
       </div>
       <div v-if="seeCatMenu" class="navbar__categories">
          <div class="container">
@@ -56,6 +71,15 @@
          </div>
       </div>
    </nav>
+   <nav class="nav__min__wrapper container">
+      <div class="nav__min__menuBtn">
+         <i class="fa fa-list" aria-hidden="true"></i>
+      </div>
+      <div class="navbar__min__center">tap.az</div>
+      <div class="navbar__min__add">
+         <i class="fa fa-plus" aria-hidden="true"></i>
+      </div>
+   </nav>
 </template>
 
 <script>
@@ -77,7 +101,15 @@ import { mapGetters } from 'vuex';
             name: "",
             see: false,
             seeCatMenu: false,
-            data: []
+            data: [],
+            navbarSee: true,
+            minSee: false
+         }
+      },
+      created() {
+         if(window.innerWidth<768) {
+            this.navbarSee=false
+            this.minSee=true
          }
       },
       methods: {
@@ -103,11 +135,44 @@ import { mapGetters } from 'vuex';
 </script>
 
 <style lang="scss" scoped>
-
+   .nav__min__wrapper {
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .nav__min__menuBtn, .navbar__min__center {
+         color: #FF4F08
+      }
+      .nav__min__menuBtn{
+         font-size: 20px;
+         cursor: pointer;
+      }
+      .navbar__min__center {
+         font-size: 30px;
+         font-weight: bold;
+      }
+      .navbar__min__add {
+         width: 20px;
+         height: 20px;
+         background: #FF4F08;
+         color: white;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         cursor: pointer;
+         border-radius: 100%;
+      }
+   }
    .navbar {
       background: #FF4F08;
       padding: 10px 0;
       position: relative;
+      &__min__wrapper {
+         display: none;
+      }
+      &__min__search {
+         display: none;
+      }
       &__categories {
          &__wrapper {
             display: flex;
@@ -255,6 +320,40 @@ import { mapGetters } from 'vuex';
             }  
          }
       }
+      @media (max-width: 991px) {
+         .navbar {
+            &__search {
+               display: none;
+            }
+            &__min__search {
+               display: block;
+               &__block {
+                  width: 100%;
+                  background: white;
+                  padding: 5px 0 5px 5px;
+                  border-radius: 10px;
+                  input {
+                     outline: none;
+                     border: none;
+                     color: gray
+                  }
+                  select {
+                     border: none;
+                     outline: none;
+                     appearance: none;
+                     padding: 5px;
+                     width: max-content;
+                     color: gray
+                  }
+                  i {
+                     color: gray
+                  }
+               }
+            }
+         
+         }
+      }
+
    }
 
 </style>

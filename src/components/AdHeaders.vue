@@ -51,4 +51,9 @@
       column-gap: 20px;
       row-gap: 20px;
    }
+   @media (max-width: 991px) {
+      .goods__wrapper {
+         grid-template-columns: repeat(3, 1fr);
+      }
+   }
 </style>

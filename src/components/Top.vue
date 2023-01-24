@@ -1,5 +1,5 @@
 <template>
-   <div class="top">
+   <div v-if="top" class="top">
       <div class="container">
          <div class="top__wrapper">
             <div class="top__left">
@@ -28,7 +28,17 @@
 
 <script>
    export default {
-      name: "TopVue"
+      name: "TopVue",
+      data() {
+         return {
+            top: true
+         }
+      },
+      created() {
+         if(window.innerWidth<768) {
+            this.top=false
+         }
+      },
    }
 </script>
 

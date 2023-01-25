@@ -8,8 +8,33 @@
             <img v-for="img in imgs" :key="img.id" @click="e=>openModal(e)" :src="require('../assets/goods/'+ img.src)" alt="">
          </div>
       </div>
-     
    </div>
+
+<div class="minSlider">
+   <swiper 
+    :slidesPerView="2"
+    :spaceBetween="40"
+    :grabCursor="true"
+    :breakpoints="breakpoints"
+     >
+    <swiper-slide  v-for="img in images" :key="img.id">
+     <img @click="e=>openModal(e)" :src="require('../assets/goods/'+ img.src)" alt="">
+   </swiper-slide>
+  </swiper>
+</div>
+
+<div class="mikroSlider">
+   <swiper 
+    :slidesPerView="2"
+    :spaceBetween="200"
+    :grabCursor="true"
+   
+     >
+    <swiper-slide  v-for="img in images" :key="img.id">
+     <img @click="e=>openModal(e)" :src="require('../assets/goods/'+ img.src)" alt="">
+   </swiper-slide>
+  </swiper>
+</div>
    <div @click.self="closeModal" v-if="see" class="photo__modal">
       <div class="photo__modal__block">
          <div @click="closeModal" class="photo__modal__exit">
@@ -22,18 +47,36 @@
 
 <script>
    import { mapGetters } from 'vuex'
+   import 'swiper/css'
+   import "swiper/css";
+
+ 
+
+   import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+
    export default {
       name: "AddVPhotoVue",
+      components: {
+         Swiper,
+      SwiperSlide
+      },
       data() {
          return {
             see: false,
-            img: ""
+            img: "",
+            breakpoints: {  
+               '705': {
+                  slidesPerView: 3,
+                  spaceBetween: 150,},
+              
+            }
          }
       },
       computed: {
          ...mapGetters(['getAllImages']),
-      
+       
          imgs() { return this.getAllImages.filter(item => item.goodId == this.$route.params.id).slice(1)},  
+         images() {return this.getAllImages.filter(item => item.goodId == this.$route.params.id)},
          className(){
             return this.imgs.length<=1?"photo__others__one":
             this.imgs.length<=2?"photo__others__two":
@@ -60,6 +103,9 @@
 </script>
 
 <style lang="scss" scoped>
+   .mikroSlider {
+      display: none;
+   }
    .photo {
       position: relative;
       &__modal {
@@ -102,10 +148,10 @@
       }
       background: #323232;
       width: 100%;
-      height: 350px;
+      height: 450px;
       &__main {
          width: 100%;
-         height: 300px;
+         height: 410px;
          img {
             width: 100%;
             height: 100%;
@@ -169,6 +215,29 @@
             }
          }
      
+      }
+   }
+   .minSlider {
+      display: none;
+   }
+   @media (max-width: 991px) {
+     .photo {
+      display: none;
+     }
+     .minSlider {
+      display: block;
+      background: #323232;
+      padding: 10px;
+     }
+   }
+   @media (max-width: 540px) {
+      .minSlider {
+         display: none;
+      }
+      .mikroSlider {
+         display: block;
+         background: #323232;
+         padding: 10px;
       }
    }
 </style>

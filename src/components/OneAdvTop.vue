@@ -48,4 +48,24 @@
          margin-left: 20px;
       }
    }
+   @media (max-width: 768px) {
+      .oneadvtop__price {
+         width: 150px;
+         font-size: 15px;
+         height: 40px;
+      }
+      .oneadvtop__name {
+         font-size: 25px;
+      }
+   }
+   @media (max-width: 556px) {
+      .oneadvtop__price {
+         width: 100px;
+         font-size: 13px;
+         height: 30px;
+      }
+      .oneadvtop__name {
+         font-size: 15px;
+      }
+   }
 </style>

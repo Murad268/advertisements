@@ -69,7 +69,7 @@
          </div>
       </div>
    </nav>
-   <nav class="nav__min__wrapper container">
+   <nav v-if="minSee" class="nav__min__wrapper container">
       <div @click="activeMenu" class="nav__min__menuBtn">
          <i class="fa fa-list" aria-hidden="true"></i>
       </div>
@@ -189,6 +189,7 @@ import { mapGetters } from 'vuex';
 <style lang="scss" scoped>
 
    .nav__min__wrapper {
+      
       .nav__min__menuBtn {
          margin-top: 7px;
       }
@@ -233,6 +234,7 @@ import { mapGetters } from 'vuex';
       background: #FF4F08;
       padding: 10px 0;
       position: relative;
+
       &__menu {
          width: 80%;
          height: 100vh;

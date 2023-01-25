@@ -50,6 +50,7 @@
 </script>
 
 <style lang="scss" scoped>
+
    .addoneabout {
       padding: 20px;
       &__desc {
@@ -57,6 +58,7 @@
          text-align: justify;
          line-height: 22px;
          font-size: 20px;
+    
       }
       hr {
          margin-top: 6px;
@@ -75,9 +77,23 @@
          }
          &__desc {
             font-weight: bold;
-            width: 250px;
+            width: 300px;
             font-size: 18px;
          }
+      }
+   }
+   @media (max-width: 556px) {
+      .addoneabout__chars {
+         width: 250px;
+         div {
+            font-size: 12px;
+         }
+         hr {
+            width: 100%;
+         }
+      }
+      .addoneabout__char__desc {
+         width: 160px;
       }
    }
 </style>

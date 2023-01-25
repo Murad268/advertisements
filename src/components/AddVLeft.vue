@@ -16,8 +16,8 @@
       <div class="add__left__footer">
          <i v-if="getElan.fav" @click="delled(getElan.id)" class="fa fa-heart addedFav"   aria-hidden="true"></i>
          <i v-else @click="added(getElan.id, getElan)" class="fa-regular fa-heart favor"  aria-hidden="true"></i>
-         <span v-if="getElan.fav" @click="delled(getElan.id)" class="addedFav" >Seçilmişlərdən çıxar</span>
-         <span v-else @click="added(getElan.id, getElan)" class="favor">Seçilmişlərə əlavə et</span>
+         <span v-if="getElan.fav" @click="delled(getElan.id)" class="addedFav favorite">Seçilmişlərdən çıxar</span>
+         <span v-else @click="added(getElan.id, getElan)" class="favor favorite">Seçilmişlərə əlavə et</span>
       </div>
     
    </div>
@@ -151,4 +151,17 @@
          }
       }
    }
+   @media (max-width: 786px) {
+      .add__left__top {
+         i {
+            font-size: 15px;
+         }
+         &__phone {
+            font-size: 15px;
+            margin-left: 12px;
+         }
+        
+      }
+   }
+
 </style>

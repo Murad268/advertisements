@@ -23,4 +23,11 @@
          text-decoration: none;
       }
    }
+   @media (max-width: 556px) {
+      .onetop {
+         a {
+            font-size: 12px;
+         }
+      }
+   }
 </style>

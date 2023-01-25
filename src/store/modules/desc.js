@@ -29,8 +29,11 @@ o Qaldırma Gücü (kg)- 32001
          `},
          {id: 2, goodId: 5, desc:
          `
-Turkiye istehsali zebra jaluz perdelerin topdan satisi qiymete catdirlma qurasdirlma daxil deyil
-unvan amay ticaret merkezinden.goture bilersiz
+Turkiye istehsali zebra jaluz 
+perdelerin topdan satisi qiymete 
+catdirlma qurasdirlma daxil deyil
+unvan amay ticaret merkezinden.
+goture bilersiz
          `},
          {id: 3, goodId: 6, desc: 
          `
@@ -44,26 +47,41 @@ TƏK ŞƏXSİYYƏT VƏSİQƏSİ İLƏ KREDİT MÜMKÜNDÜR.
 🖥️ • Ekran: 15,6" FHD IPS 144HZ
 🔖 • Zəmanət: 12 Ay
 
-💻 • Əməliyyat sistemi: Windows 10 PRO (Hədiyyə olaraq yazılır)
+💻 • Əməliyyat sistemi: 
+Windows 10 PRO (Hədiyyə olaraq yazılır)
 
-Office Adobe Programları və istəyə uyğun bütün proqramlar mağaza tərəfindən tam ödənişsiz 
-yazılır. (3D MAX AUTOCAD COREL və s)
-computer pcgamer windows pcbuild gigabyte corsair rgb pcmasterrace tech lenovo i hp 
-gamingsetup dell technology pcsetup custompc
-Etiketler: ACER Predator Nitro ASUS ROG TUF VivoBook DELL Alienware G3 G5 HP Omen Victus 
-Pavilion LENOVO Legion Ideapad MSI Gaming ACER Aspire Extensa ASUS VivoBook DELL Vostro 
-Latitude HP Pavilion LENOVO Ideapad APPLE MacBook ACER Swift Spin ASUS ZenBook, 
-X Series DELL XPS HP Spectre ENVY ProBook LENOVO ThinkPad gaming notebook gaming case 
-ASUS TUF TUF GAMING Oyun kompyuteri Oyun notebook
+Office Adobe Programları və istəyə 
+uyğun bütün proqramlar mağaza 
+tərəfindən tam ödənişsiz yazılır. 
+(3D MAX AUTOCAD COREL və s)
+computer pcgamer windows 
+pcbuild gigabyte corsair rgb 
+pcmasterrace tech lenovo i hp 
+gamingsetup dell technology 
+pcsetup custompc
+Etiketler: ACER Predator Nitro ASUS 
+ROG TUF VivoBook DELL Alienware 
+G3 G5 HP Omen Victus Pavilion 
+LENOVO Legion Ideapad MSI Gaming 
+ACER Aspire Extensa ASUS VivoBook 
+DELL Vostro Latitude HP Pavilion 
+LENOVO Ideapad APPLE MacBook ACER 
+Swift Spin ASUS ZenBook, 
+X Series DELL XPS HP Spectre ENVY 
+ProBook LENOVO ThinkPad gaming notebook 
+gaming case ASUS TUF TUF GAMING 
+Oyun kompyuteri Oyun notebook
 MSI ROG Oyun kompyuteri JBL 500BT
-
-
          `},
          {id: 4, goodId: 10, desc: 
          `
-Nizami metrosun yaninda ev yalniz aile ucun kiraye verilir, 2 mertebeli binanin 1 ci mertebesi, 
-umumi heyet, evin girisi ayridir, tualet hamam evin icindedir, qaz, su, isiq daimidir. Telefon, 
-internet var. Xahis olunur maraqlananlar whats app la NARAHAT ETMEYIN, zeng vurun
+Nizami metrosun yaninda ev yalniz aile 
+ucun kiraye verilir, 2 mertebeli binanin 
+1 ci mertebesi, umumi heyet, evin girisi 
+ayridir, tualet hamam evin icindedir, qaz, 
+su, isiq daimidir. Telefon, 
+internet var. Xahis olunur maraqlananlar 
+whats app la NARAHAT ETMEYIN, zeng vurun
          `},
          {
             id: 5, 
@@ -86,11 +104,16 @@ Gprinter 1124D Thermal Barcode Printer
 ✅ Kart vasitəsilə ödəniş mümkündür
 ✅ Qiymət ƏDV daxil göstərilmişdir
 
-✅ Ünvan: Əcəmi Naxçıvani 138a, Bakı, Azərbaycan (Naxçıvani Residens-in yanı)
+✅ Ünvan: Əcəmi Naxçıvani 138a, 
+Bakı, Azərbaycan (Naxçıvani Residens-in yanı)
 
-CreaTech, HP, Dell, Asus, Acer, Lenovo, Notebook, Elzab, Zebra, Xprinter, Monitor, Datalogic, 
-Symbol, Scaner, Barcod Scaner, Printer, Terminal, Komputer, Noutbuk, 
-Barcod printer, Barkod printer, Barkod printeri,Gprinter 1124D, 1124 Gprinter, gprinter
+CreaTech, HP, Dell, Asus, Acer, Lenovo, 
+Notebook, Elzab, Zebra, Xprinter, Monitor, 
+Datalogic, Symbol, Scaner, Barcod Scaner, 
+Printer, Terminal, Komputer, Noutbuk, 
+Barcod printer, Barkod printer, Barkod 
+printeri,Gprinter 1124D, 1124 Gprinter, 
+gprinter
             `
          },
          {id: 6, goodId: 14, desc: 
@@ -121,11 +144,16 @@ Simens Paltaryuyan təmiri servis
 Blonberg Paltaryuyan təmiri servis 
 Gorenje Paltaryuyan təmiri servis 
 Electrolux Paltaryuyan.təmiri servis 
-Butun model Paltaryuyan Maşınların Plataların təmiri və sifarişi matorların dəyişilməsi VƏ SİFARİŞİ 
-Paltar yuyan masin ustasi Paltaryuyan maşın ustası Paltaryuyan ustasi Paltaryuyan ustası Paltar 
-yuyan masin usdası Paltaryuyan ustasıPaltaryuyan ustası Paltaryuyan temiri Paltaryuyan masin temiri 
-Paltar yuyan masin temiri Paltaryuyan maşın təmiri Paltar yuyan maşın təmiri Paltaryuyan masın təmiri Paltaryuyan
-maşın temiri Paltaryuyanmasın təmiri Paltaryuyan təmiri Paltaryuyan temiri 
+Butun model Paltaryuyan Maşınların Plataların təmiri və 
+sifarişi matorların dəyişilməsi VƏ SİFARİŞİ 
+Paltar yuyan masin ustasi Paltaryuyan maşın ustası 
+Paltaryuyan ustasi Paltaryuyan ustası Paltar 
+yuyan masin usdası Paltaryuyan ustasıPaltaryuyan 
+ustası Paltaryuyan temiri Paltaryuyan masin temiri 
+Paltar yuyan masin temiri Paltaryuyan maşın təmiri 
+Paltar yuyan maşın təmiri Paltaryuyan masın təmiri 
+Paltaryuyan maşın temiri Paltaryuyanmasın təmiri 
+Paltaryuyan təmiri Paltaryuyan temiri 
 Ремонт стиральных машин 
 Ремонт стиральных машин 
 Bütün marka və model paltaryuyan təmiri 
@@ -173,27 +201,32 @@ K22 Simsiz Mikrofon
             `
 Məhdud Sayda!!!
 
-Qurban Qurbanov, Kevin Medina, Maksim Medvedev, Kady Borges və 
-Qara Qarayev tərəfindən imzalanmış forma.
-Orijinallıq sertifikatı klub rəhbərliyi tərəfindən imzalanıb və təqdim olunub.
+Qurban Qurbanov, Kevin Medina, Maksim Medvedev, 
+Kady Borges və Qara Qarayev tərəfindən imzalanmış forma.
+Orijinallıq sertifikatı klub rəhbərliyi 
+tərəfindən imzalanıb və təqdim olunub.
 
 Bakı şəhəri daxilində çatdırılma ödənişsizdir.
 
-Digər məhsullarımızla instagram səhifəmizdə tanış ola bilərsiz: bombardierfanshop
+Digər məhsullarımızla instagram səhifəmizdə 
+tanış ola bilərsiz: bombardierfanshop
             `},
             {id: 9, goodId: 8, desc: 
             `
 Masazır qəsəbəsi, Yoncalıq, 2.5 sotda tikilmiş 
-kürsülü 2 mərtəbəli 150kv metr 4 otaqlı təmirli həyət evi satılır. 
-(N1419) bütün komunal xıtlər var. Sənəd KUPÇA. Abşeron ərazisində yerləşən 
-elanlarımıza Yutub “Heyet evleri Masazırda” kanalı vasitəsilə, eləcədə gündəlik yenilənən 
-elanlarımızı telegram kanalına abunə olaraq izləyə bilərsiniz.
+kürsülü 2 mərtəbəli 150kv metr 4 otaqlı 
+təmirli həyət evi satılır. (N1419) bütün 
+komunal xıtlər var. Sənəd KUPÇA. Abşeron 
+ərazisində yerləşən elanlarımıza Yutub “Heyet 
+evleri Masazırda” kanalı vasitəsilə, eləcədə 
+gündəlik yenilənən elanlarımızı telegram 
+kanalına abunə olaraq izləyə bilərsiniz.
             `}, 
             {
                id: 10, goodId: 20, desc: 
                `
-1600aznlik Razor bike mağaza bağlandığından büyük endirimlə satılır.
-
+1600aznlik Razor bike mağaza bağlandığından 
+büyük endirimlə satılır.
 10+ yaşa uygundur
                `
             },
@@ -214,9 +247,9 @@ manata
             {id: 13, goodId: 25, desc: 
             `
 Cütləşdirmək üçün Dik Qulaq! , Dişi
-British və ya Scottish pişik axtarılır.şərtləri öz aramızda danışarıq.
-
-Erkək Şotland Fold qızılı Şinşila pişiyi (cütləşdirmək üçün)
+British və ya Scottish pişik axtarılır.
+şərtləri öz aramızda danışarıq. Erkək Şotland 
+Fold qızılı Şinşila pişiyi (cütləşdirmək üçün)
             `},
             {
                id: 14,
@@ -231,9 +264,11 @@ Tecili satılır ...
                goodId: 2,
                desc: 
                `
-Texnika saz veziyyetdedir hec bir prablemi yoxdur her 
-bir weyi iwlekdir salon paxlava dam alikantar mator karopka mostdar 
-saz veziyuetdedir tecili pula ehtiyac olduqna gore satilir
+Texnika saz veziyyetdedir hec bir 
+prablemi yoxdur her bir weyi iwlekdir 
+salon paxlava dam alikantar mator karopka mostdar 
+saz veziyuetdedir tecili pula ehtiyac 
+olduqna gore satilir
                `
             },
             {
@@ -271,13 +306,15 @@ Ofis oturacaqi.ofis oturacaqi.ofis stulu.
 Ofis masasi.ofis stullari isu.isu.isu.isu.
 Viza viza .viza,viza,viza,viza,viza.viza.
 Viza stul,vizastul.viza oturacaq.viza
-Kuxna mebeli.kuxna mebeli.kuxns mebeli.kuxna mebeli,kuxna mebeli,
+Kuxna mebeli.kuxna mebeli.kuxns mebeli.
+kuxna mebeli,kuxna mebeli,
 Kuxna stulu.kuxna stulu.kuxna stulu,
 Kuxna masasi,kuxna masasi.kuxna st.
 Kuxna stulu.kuxna stullar.kuxna stulu.
 Baq evleri .baq evleri.baq evi.baq evi.
 Baq evi stulu.baq evi stullari.stu.stul.st.
-Baq evi masasi,baq evi masasi.stullar.Restaranstul.stul.dtul.
+Baq evi masasi,baq evi masasi.stullar.
+Restaranstul.stul.dtul.
 Heyet evi stullari, heyet evi stul.stul.stu.
 Restaran stul.restaran masasi.stul.stul,
 Tedriz merkezleri.tedriz merkezi stulu.
@@ -285,12 +322,15 @@ Tedriz mebeli.tedriz stullu,stullar.stul.
 Tedriz stullu.tedriz mebeli.stullarstul.
 Tedriz masasi.tedriz masa.masa.masa.
 Yaşil ,yaşil.Goy.goy.goy.goy.Qirmizi.goyi.
-Yashil stul.Qirmizi stul.Qara stul.Goy stul.mavi stul.yashil masa.goy masa.
+Yashil stul.Qirmizi stul.Qara stul.Goy stul.
+mavi stul.yashil masa.goy masa.
 Yaşl stul.Yaşl masa.karicni stul.stulstul.
 
-Bağ , mətbəx və eyvanlarınız üçün çox əlverişli
-*Masa dəstləri*
-Müştərilərin istəyini nəzərə alaraq ən çox bəyənilən dəstimiz yenidən satışda🥳
+Bağ , mətbəx və eyvanlarınız 
+üçün çox əlverişli *Masa dəstləri*
+Müştərilərin istəyini nəzərə 
+alaraq ən çox bəyənilən 
+dəstimiz yenidən satışda🥳
 Qiymət : *135azn.*
 Masa ölçü:
 70 x 1.10 + 4 stul
@@ -309,15 +349,24 @@ Oturacaqlar istəyə görə parça və ya dəri ilə hazırlanır.
                goodId: 9,
                desc: 
                `
-Heyet evi Masazırın çox yaxşı yerinde yerləşir.Masazır dairəsindən 
-Masazırın içərisine doğru getdikde 50-60 metrdən sonra birinci döngədən 
-sağa döndükdən sonra 400-500metr irəlidə.Hem evin həmdə torpağın 
-Çıxarışı(Kupça)var.Torpaq 10 sotdur.Ev torpağın bir tərəfinde yerləşir.
-Torpağın qalan hissələri boşdur. Heyetdə hətta 4 ədəd geniş ev tikmek mümkündür.
-Evin ölçüləri 12 metrin 12 metrədir.Ev iki mərtebelidir. Evin ümumi sahəsi iki mərtəbə birlikdə 
-231 kvadrat metrdir. Evin 2 eded balkonu var.1-ci mərtəbədə 1 böyük zal,1 yataq otağı, 1 geniş 
-mətbəx, 1 tualet, 1 hamam var. 2-ci mərtəbədə 3 otaq, 1 mətbəx, 
-1 hamam-tualet var. Otaqlar çox genişdir. Zal 45 kvadrat metr.Bu ərazidə 
+Heyet evi Masazırın çox yaxşı 
+yerinde yerləşir.Masazır dairəsindən 
+Masazırın içərisine doğru getdikde 
+50-60 metrdən sonra birinci döngədən 
+sağa döndükdən sonra 400-500metr 
+irəlidə.Hem evin həmdə torpağın 
+Çıxarışı(Kupça)var.Torpaq 10 sotdur.
+Ev torpağın bir tərəfinde yerləşir.
+Torpağın qalan hissələri boşdur. 
+Heyetdə hətta 4 ədəd geniş ev tikmek mümkündür.
+Evin ölçüləri 12 metrin 12 metrədir.Ev iki
+mərtebelidir. Evin ümumi sahəsi iki mərtəbə birlikdə 
+231 kvadrat metrdir. Evin 2 eded balkonu var.1-ci 
+mərtəbədə 1 böyük zal,1 yataq otağı, 1 geniş 
+mətbəx, 1 tualet, 1 hamam var. 2-ci mərtəbədə 
+3 otaq, 1 mətbəx, 
+1 hamam-tualet var. Otaqlar çox genişdir. 
+Zal 45 kvadrat metr.Bu ərazidə 
 10 sot sənədli torpaq və ev tapmaq çox çətindir.
 Çox təcili satıldığı üçün qiymət ərazinin real 
 qiymətindən aşağıdır.Öz evimdir. Vasitəçi deyiləm.
@@ -370,9 +419,11 @@ Apple, Xiaomi, Samsung, Nokia
             goodId: 11,
             desc: 
             `
-Yeni Üzüy 585 eyyar. Çeki 7.25 qram. Yeni madel koçak brendi. Üzeri Savarovsqi qaşlarla 
+Yeni Üzüy 585 eyyar. Çeki 7.25 qram. 
+Yeni madel koçak brendi. Üzeri Savarovsqi qaşlarla 
 bezedilmişdir. Razmer 19.
-Ünvan Vasmoy 8-ci km mağaza Neftçiler metrosu yaxınlığı. (Vaçap aktivdi) Elnur.
+Ünvan Vasmoy 8-ci km mağaza Neftçiler 
+metrosu yaxınlığı. (Vaçap aktivdi) Elnur.
             `
          },
          {
@@ -386,8 +437,11 @@ bezedilmişdir. Razmer 19.
 Məhsul haqqında:
 Niyə Dubay istehsalı ətir alasınız?
 100 mldir,qiyməti isə çox münasibdir.
-Əllərdə düzəlmir,tərkibi zavodda düzəlmiş parfüm olduğu üçün - yağ kimi ləkə saxlamır, əsl ətirdir!
-Biz Dubay istehsalı olan ətirlərin əvvəl ki buraxılışlarını gətiririk. Əvvəl ki istehsallar daha çox keyfiyyətli və qalıcıdır!
+Əllərdə düzəlmir,tərkibi zavodda düzəlmiş 
+parfüm olduğu üçün - yağ kimi ləkə saxlamır, əsl ətirdir!
+Biz Dubay istehsalı olan ətirlərin əvvəl ki 
+buraxılışlarını gətiririk. 
+Əvvəl ki istehsallar daha çox keyfiyyətli və qalıcıdır!
 
 🇸🇦 İstehsal - Dubay.
 ✅ Keyfiyyət - A Class.
@@ -398,12 +452,19 @@ Biz Dubay istehsalı olan ətirlərin əvvəl ki buraxılışlarını gətiririk
 📌 Ünvan – Bakı Beynalxalq Avtovağzal, Baku Outlet Park.
 🛵 Çatdırılma – Ödənişsiz və ödənişli var.
 
-🔥 KAMPANİYA - (Müəllim,Həkim və Dövlət qulluqçularına əlavə 10 % endirim.)
+🔥 KAMPANİYA - (Müəllim,Həkim və Dövlət 
+   qulluqçularına əlavə 10 % endirim.)
 ⌛ Endirim Avqust ayının 1 - ə qədər keçərlidir.
 🤝 KREDIT - İlkin ödəniş 30 % olmaqla,1-2-3 və 6 aya qədər.
-🤝 Barter - Evinizdə alıb bəyənməyib - istifadə etmədiyiniz ətirləri 30 % daha ucuz olan ətirlə barter edirik.
-👉 Biz nə satırıq? - Original upakovka,Original tester,Original Outlet(Deffetkli), Demonstration Tester,Polşa istehsalı AAA CLASS, 
-Türkiyyə və Dubai istehsalı A Class ətirlər. Bundan əlavə olaraq Premium,Yaxşı və orta keyfiyyətli yağlardan hazırlanmış ətirlər! - 
+🤝 Barter - Evinizdə alıb bəyənməyib - 
+istifadə etmədiyiniz ətirləri 30 % daha ucuz 
+olan ətirlə barter edirik.
+👉 Biz nə satırıq? - Original upakovka,Original tester,
+Original Outlet(Deffetkli), Demonstration 
+Tester,Polşa istehsalı AAA CLASS, 
+Türkiyyə və Dubai istehsalı A Class 
+ətirlər. Bundan əlavə olaraq Premium,Yaxşı və 
+orta keyfiyyətli yağlardan hazırlanmış ətirlər! - 
 Nə istədiyinizi mütləq satış menecerimizə söyləyin!
             `
          },
@@ -412,8 +473,10 @@ Nə istədiyinizi mütləq satış menecerimizə söyləyin!
             goodId: 15,
             desc: 
             `
-Obyektlərin, bağ evlərinin, binaların, tikinti sahələrinin, 
-toy karteclərinin son model Dronla çəkilişini reallaşdırırıq. 
+Obyektlərin, bağ evlərinin, 
+binaların, tikinti sahələrinin, 
+toy karteclərinin son model 
+Dronla çəkilişini reallaşdırırıq. 
 Qiymət vaxta və çəkilişə görə dəyişir
             `
          },
@@ -422,8 +485,10 @@ Qiymət vaxta və çəkilişə görə dəyişir
             goodId: 16,
             desc: 
             `
-Salam Aleykum.. her nov konteynerlerin ve istenilen olcude konteyner 
-tipli metalkonstruksiyaalarin sifarisnen yiqilmasi ve tez bir zamanda 
+Salam Aleykum.. her nov konteynerlerin 
+ve istenilen olcude konteyner 
+tipli metalkonstruksiyaalarin 
+sifarisnen yiqilmasi ve tez bir zamanda 
 acarlari tehfil verilmesi.. nomrede whatsapp var..
             `
          },
@@ -448,16 +513,30 @@ Qiyməti - 77.000 AZN + 18% ƏDV
 
 Böyük həcmlərdə endirim etmək mümkündür.
 
-Şirkətimizdən yeni nəsil texnologiya standartı olan müxtəlif ölçüdə prefabrik binalar və sökülə bilən konteynerə təqdim edilir.
+Şirkətimizdən yeni nəsil texnologiya 
+standartı olan müxtəlif ölçüdə prefabrik 
+binalar və sökülə bilən konteynerə təqdim edilir.
 
-Metal-karkas elementləri bolt-qayka sistemi ilə yığılır və qısa müddətdə 3 mərtəbəyədək müxtəlif ölçülərlə qurula bilir.
-Bir daşınmaya 8 ədəd konyetner dəsti daşımaq mümkündür.
+Metal-karkas elementləri bolt-qayka sistemi 
+ilə yığılır və qısa müddətdə 3 mərtəbəyədək 
+müxtəlif ölçülərlə qurula bilir.
+Bir daşınmaya 8 ədəd konyetner 
+dəsti daşımaq mümkündür.
 
-Demonte konteynerlər quru və digər nəqliyyat vasitəsi ilə daşına bilir, az yer tutur, asanlıqla quraşdırılır və istifadə təyinatına uyğun olaraq uyğunlaşa bilir.
+Demonte konteynerlər quru və digər 
+nəqliyyat vasitəsi ilə daşına bilir, 
+az yer tutur, asanlıqla quraşdırılır 
+və istifadə təyinatına uyğun olaraq 
+uyğunlaşa bilir.
 
-Xüsusilə ən sərt hava şəraitinin yaşandığı bölgələrdə yüksək izolyasiya dərəcəsinə malik poliuretan panelləri istifadə edilir.
+Xüsusilə ən sərt hava şəraitinin yaşandığı 
+bölgələrdə yüksək izolyasiya dərəcəsinə 
+malik poliuretan panelləri istifadə edilir.
 
-Konteynerlər biri-birilə birləşdirilərək müxtəlif plçelərdə inziibati binalar, yataqxanalar, xəstəxana, SQ-duş, yeməkxana və digər təyinatlı binaları qurulması qısa zaman ərzində həyata keçirilir.
+Konteynerlər biri-birilə birləşdirilərək 
+müxtəlif plçelərdə inziibati binalar, yataqxanalar, 
+xəstəxana, SQ-duş, yeməkxana və digər təyinatlı 
+binaları qurulması qısa zaman ərzində həyata keçirilir.
 
 Mövcud konteyner ölçüləri:
 
@@ -478,9 +557,17 @@ W 3.000; L 6.000; H 2.650; S-16,61 m2
             goodId: 18,
             desc: 
             `
-***Kassa market sistemi təklifi ,istenilen barkod sistem avadanliqlarin qurulması və program yazilmasi xidemti
-*** Barkod avadanlıqlarının satışı və obyektinizə barkod sistemi qurulması.
-*** Market, restoran, kafe, pub, geyim mağazası, şərab evi, aptek, xırdavat, istehsalat, telefon aksessuarları, parfumeriya, bijuteriya, avto-ehtiyat hissələri, elektronika mağazası və s. ticarət obyektləri üçün proqram təminatı, pos avadanlıqlar və servis xidməti
+***Kassa market sistemi təklifi ,i
+stenilen barkod sistem avadanliqlarin 
+qurulması və program yazilmasi xidemti
+*** Barkod avadanlıqlarının satışı və 
+obyektinizə barkod sistemi qurulması.
+*** Market, restoran, kafe, pub, geyim 
+mağazası, şərab evi, aptek, xırdavat, 
+istehsalat, telefon aksessuarları, parfumeriya, 
+bijuteriya, avto-ehtiyat hissələri, elektronika 
+mağazası və s. ticarət obyektləri üçün proqram 
+təminatı, pos avadanlıqlar və servis xidməti
 
 ***Qiymet serti yazilib**
 
@@ -506,7 +593,8 @@ W 3.000; L 6.000; H 2.650; S-16,61 m2
             goodId: 26,
             desc:
             `
-Guşxana satılır 16 guş tutur izalyasiya olunub giymət sondu ünvan Maştağa bağları
+Guşxana satılır 16 guş tutur izalyasiya olunub g
+iymət sondu ünvan Maştağa bağları
             `
          },
          {
@@ -514,13 +602,19 @@ Guşxana satılır 16 guş tutur izalyasiya olunub giymət sondu ünvan Maştağ
             goodId: 27,
             desc: 
             `
-Bakida, birinci sekildeki. canli qəlib baxa bilərsiz!! Xaricdən, ən ucuz yalniz bizdə!!! 
-Rossiyadan gelir, bakida Шпиц, померанский 1400 0manat. 
-Pomerian spic, boo, 2~2.5 ayliq,hər rəngdə; sifarişlə gəlir russiyadan, 
+Bakida, birinci sekildeki. canli qəlib 
+baxa bilərsiz!! Xaricdən, ən ucuz yalniz bizdə!!! 
+Rossiyadan gelir, bakida Шпиц, померанский 
+1400 0manat.  Pomerian spic, 
+boo, 2~2.5 ayliq,hər rəngdə; sifarişlə gəlir russiyadan, 
 ən ucuz qiymətlər bizdə. 
-Щенки, померанский шпиц ;по заказу, любой окрас, доставка в течение 2~3 недель, whatsapp активен;
+Щенки, померанский шпиц ;по заказу, 
+любой окрас, доставка в течение 2~3 
+недель, whatsapp активен;
 Цены от 1600 манат
-Və başqa parodalar: toy pudel; maltipu; chau chau; york; king charlz spaniel və s
+Və başqa parodalar: toy pudel; 
+maltipu; chau chau; york; 
+king charlz spaniel və s
             `
          }, 
          {
@@ -528,8 +622,10 @@ Və başqa parodalar: toy pudel; maltipu; chau chau; york; king charlz spaniel v
             goodId: 28,
             desc: 
             `
-Real alıcıya endirim var, Yaxşı baxacaq şəxsler əlaqə saxlasin 
-dişləmir sakitdir baxmağa vaxt olmadığına görə satilir
+Real alıcıya endirim var, 
+Yaxşı baxacaq şəxsler əlaqə saxlasin 
+dişləmir sakitdir baxmağa 
+vaxt olmadığına görə satilir
             `
          },
          {
@@ -537,7 +633,9 @@ dişləmir sakitdir baxmağa vaxt olmadığına görə satilir
             goodId: 29,
             desc: 
             `
-            Smental inekler 7 ayliq bogazdir.2900 bawlayan qiymetler 2 il sgortasi var.maraqlanmaq isteyen zeng vursun
+            Smental inekler 7 ayliq bogazdir.
+            2900 bawlayan qiymetler 2 il 
+            sgortasi var.maraqlanmaq isteyen zeng vursun
             `
          },
          {
@@ -545,12 +643,15 @@ dişləmir sakitdir baxmağa vaxt olmadığına görə satilir
             goodId: 30,
             desc: 
             `
-Tecili Moykaya isci axtarilir. Abyekt xadavoy yerdedi ve 
-klentli abyektdi daimi fikri ciddi olan pula ehtiyaci olan 
-elaqe saxlasin. (Esasda Rayonda qalanlar) 3-5 gunluk bos bekar 
-adamlar yigmasin 3 bokslu moykadir narmal eli temiz olan isci 
-axtariram.esasda rayon uwaqlari olsun. Nawukur insanlar yigmasin. 
-Faizde 50/50 ye gece smenide lazimdir seher smenide lazimdi. 
+Tecili Moykaya isci axtarilir. Abyekt 
+xadavoy yerdedi ve  klentli abyektdi daimi 
+fikri ciddi olan pula ehtiyaci olan 
+elaqe saxlasin. (Esasda Rayonda qalanlar) 
+3-5 gunluk bos bekar adamlar yigmasin 3 
+bokslu moykadir narmal eli temiz olan isci 
+axtariram.esasda rayon uwaqlari olsun.
+Nawukur insanlar yigmasin. Faizde 50/50 
+ye gece smenide lazimdir seher smenide lazimdi. 
 Ciddi iwe ehtyac olanlar yigsin.
             `
          },
@@ -570,7 +671,12 @@ telefon nömrəsi baxıcı axtaran ev sahibinin öz
 nömrəsidir. İş düzəldən şirkətlər və ya vasitəçi 
 şəxslər zəng vurmasın.
 
-Tags: is elani, is elanlari, iş elanları, vakansiya, vakansiyalar, daye teleb olunur, daye axtarilir, xanımlar üçün iş elanları, qadinlar ucun is elanlari, daye isi axtariram, usaga baxmaga daye axtariram, usaq baxicisi teleb olunur
+Tags: is elani, is elanlari, iş elanları, 
+vakansiya, vakansiyalar, daye teleb olunur, 
+daye axtarilir, xanımlar üçün iş elanları, 
+qadinlar ucun is elanlari, daye isi axtariram, 
+usaga baxmaga daye axtariram, usaq baxicisi 
+teleb olunur
             `
          }
       ]

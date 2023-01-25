@@ -191,4 +191,19 @@
          cursor: pointer;
       }
    }
+   @media (max-width: 991px) {
+      .filterPage__filter {
+         grid-template-columns: repeat(3, 1fr);
+      }
+   }
+   @media (max-width: 556px) {
+      .filterPage__filter {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+   @media (max-width: 380px) {
+      .filterPage__filter {
+         grid-template-columns: repeat(1, 1fr);
+      }
+   }
 </style>

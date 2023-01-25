@@ -23,4 +23,9 @@
    span {
       color: gray
    }
+   @media (max-width: 1000px) {
+      a {
+         font-size: 12px;
+      }
+   }
 </style>

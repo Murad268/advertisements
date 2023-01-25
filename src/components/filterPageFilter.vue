@@ -1,5 +1,5 @@
 <template>
-   <router-link :to="{name: 'goods', params: {city: $route.params.city, name: $route.params.name, filter: type.name}}">{{ type.name }}  <span> ({{getLength.length}})</span></router-link>
+   <router-link class="link" :to="{name: 'goods', params: {city: $route.params.city, name: $route.params.name, filter: type.name}}"><span>{{ type.name }}</span>  <span> ({{getLength.length}})</span></router-link>
 </template>
 
 <script>
@@ -36,11 +36,28 @@
 </script>
 
 <style lang="scss" scoped>
+ 
    a {
       line-height: 32px;
       text-decoration: none;
+
       span {
          color: gray;
+      }
+   }
+   @media (max-width: 1200px) {
+      span {
+         font-size: 14px;
+      }
+   }
+   @media (max-width: 768px) {
+      span {
+         font-size: 11px;
+      }
+   }
+   @media (max-width: 556px) {
+      span {
+         font-size: 20px;
       }
    }
 </style>

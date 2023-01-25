@@ -44,4 +44,29 @@ import { mapGetters } from 'vuex';
          color: #FF4F08;
       }
    }
+   @media (max-width: 556px) {
+      .favTitle__wrapper {
+         width: 150px;
+      }
+      .favTitle {
+         font-size: 25px;
+      }
+      .favTitle__count {
+         width: 25px;
+         height: 25px;
+         font-size: 12px;
+      }
+   }
+   @media (max-width: 400px) {
+      .favTitle__wrapper {
+         width: 120px;
+      }
+      .favTitle {
+         font-size: 20px;
+      }
+      .favTitle__count {
+         width: 20px;
+         height: 20px;
+      }
+   }
 </style>

@@ -65,20 +65,32 @@
       .favList__wrapper {
          grid-template-columns: repeat(3, 1fr);
          column-gap: 10px;
-        
+      }
+      .favEmpty__desc {
+         font-size: 15px;
       }
    }
    @media (max-width: 556px) {
       .favList__wrapper {
          grid-template-columns: repeat(2, 1fr);
          column-gap: 12%;
-        
+      }
+      .favEmpty__desc {
+         text-align: center;
+      }
+      .favEmpty__btn {
+         width: 150px;
+         height: 30px;
+         font-size: 15px;
       }
    }
    @media (max-width: 412px) {
       .favList__wrapper {
          grid-template-columns: repeat(2, 1fr);
          column-gap: 10px;
+      }
+      .favEmpty__desc {
+         font-size: 12px;
       }
    }
 </style>

@@ -55,4 +55,30 @@
          margin: 15px auto 0 auto;
       }
    }
+   @media (max-width: 991px) {
+      .favList__wrapper {
+         grid-template-columns: repeat(3, 1fr);
+         grid-gap: 50px;
+      }
+   }
+   @media (max-width: 768px) {
+      .favList__wrapper {
+         grid-template-columns: repeat(3, 1fr);
+         column-gap: 10px;
+        
+      }
+   }
+   @media (max-width: 556px) {
+      .favList__wrapper {
+         grid-template-columns: repeat(2, 1fr);
+         column-gap: 12%;
+        
+      }
+   }
+   @media (max-width: 412px) {
+      .favList__wrapper {
+         grid-template-columns: repeat(2, 1fr);
+         column-gap: 10px;
+      }
+   }
 </style>

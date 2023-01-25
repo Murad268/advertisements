@@ -57,7 +57,7 @@
    }
    @media (max-width: 556px) {
       span {
-         font-size: 20px;
+         font-size: 16px;
       }
    }
 </style>

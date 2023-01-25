@@ -15,6 +15,9 @@
       Header,
       FavVue,
       FooterVue
+    },
+    created() {
+      alert("Hörmətli qonaq, bu vepsayt real tap.az saytının daha az funksionala malik frontend kopyasıdır. Real saytın dizayn və ölçüləri deyil, mənim seçdiyim dizayn və ölçülər istifadə edilib. Adaptasiyaya isə sadəcə səthi fikir verilib. Əsas məqsəd isə developerin frontend məntiqi bacarığını nümayiş etdirməkdir. Vebsayt heç bir real fəaliyyətə iddialı deyil")
     }
   }
 </script>

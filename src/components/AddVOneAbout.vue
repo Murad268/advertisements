@@ -93,7 +93,7 @@
          }
       }
       .addoneabout__char__desc {
-         width: 160px;
+         width: 155px;
       }
    }
 </style>

@@ -8,11 +8,18 @@
 <script>
    import FavHeader from '@/components/FavHeader.vue';
    import FavList from '@/components/FavList.vue'
+   import { mapMutations } from 'vuex';
    export default {
       name: "FavVue",
       components: {
          FavHeader,
          FavList
+      },
+      created() {
+         this.closeMenu()
+      },
+      methods: {
+         ...mapMutations(['closeMenu'])
       }
    }
 </script>

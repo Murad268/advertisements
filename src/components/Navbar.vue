@@ -70,7 +70,7 @@
       </div>
    </nav>
    <nav v-if="minSee" class="nav__min__wrapper container">
-      <div @click="activeMenu" class="nav__min__menuBtn">
+      <div @click="setLeft" class="nav__min__menuBtn">
          <i class="fa fa-list" aria-hidden="true"></i>
       </div>
       <router-link to="/" class="navbar__min__center">tap.az</router-link>
@@ -126,7 +126,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
    import City from './City.vue';
    export default {
       name: "NavbarVue",
@@ -135,9 +135,9 @@ import { mapGetters } from 'vuex';
       },
  
       computed: {
-         ...mapGetters(["allCities", "getTypes", "getSubTypes"]),
+         ...mapGetters(["allCities", "getTypes", "getSubTypes", "getLeft"]),
          className() {
-            return this.left?'navbar__menu__active':""
+            return this.getLeft?'navbar__menu__active':""
          }
       },
       data() {
@@ -148,8 +148,7 @@ import { mapGetters } from 'vuex';
             seeCatMenu: false,
             data: [],
             navbarSee: true,
-            minSee: false,
-            left: false
+            minSee: false
          }
       },
       created() {
@@ -159,12 +158,7 @@ import { mapGetters } from 'vuex';
          }
       },
       methods: {
-         activeMenu() {
-            this.left = true
-         },
-         closeMenu() {
-            this.left = false
-         },
+         ...mapMutations(['setLeft', 'closeMenu']),
          click() {
             this.seeCatMenu=false
          },

@@ -12,6 +12,7 @@
    import AddVAbout from '@/components/AddVAbout.vue';
    import AddVPhoto from '@/components/AddVPhoto.vue';
    import OneTop from '@/components/OneTop.vue';
+   import { mapMutations } from 'vuex';
    export default {
       name: "OneAdv",
       components: {
@@ -19,6 +20,12 @@
          AddVAbout,
          AddVPhoto,
          OneTop
+      },
+      created() {
+         this.closeMenu()
+      },
+      methods: {
+         ...mapMutations(['closeMenu'])
       }
    }
 </script>

@@ -8,10 +8,17 @@
 
 <script>
    import VipResults from '@/components/VipResults.vue';
+   import { mapMutations } from 'vuex';
    export default {
       name: 'VipPageVue',
       components: {
-         VipResults
+         VipResults,
+      },
+      created() {
+         this.closeMenu()
+      },
+      methods: {
+         ...mapMutations(['closeMenu'])
       }
    }
 </script>

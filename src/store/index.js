@@ -4,6 +4,7 @@ import goods from './modules/goods'
 import favorites from './modules/favorites'
 import cities from './modules/cities'
 import desc from './modules/desc'
+import menu from './modules/menu'
 export default createStore({
 
   modules: {
@@ -11,6 +12,7 @@ export default createStore({
     goods,
     favorites,
     cities,
-    desc
+    desc,
+    menu
   }
 })

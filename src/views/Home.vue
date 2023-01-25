@@ -5,7 +5,7 @@
 </template>
 
 <script>
-   import { mapGetters } from 'vuex';
+   import { mapGetters, mapMutations } from 'vuex';
    import AddV from '@/components/AddV.vue';
    import Types from '@/components/Types.vue';
    export default {
@@ -16,7 +16,13 @@
     },
     computed: {
          ...mapGetters(["getVipGoods", "getLastGoods"])
-      }
+   },
+   created() {
+      this.closeMenu()
+   },
+   methods: {
+      ...mapMutations(['closeMenu'])
+   }
    }
 </script>
 

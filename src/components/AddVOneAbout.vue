@@ -79,6 +79,7 @@
             font-weight: bold;
             width: 300px;
             font-size: 18px;
+         
          }
       }
    }
@@ -92,8 +93,9 @@
             width: 100%;
          }
       }
-      .addoneabout__char__desc {
-         width: 155px;
+      .addoneabout__desc {
+      
+         font-size: 14px;
       }
    }
 </style>

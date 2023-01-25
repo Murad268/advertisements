@@ -3,13 +3,19 @@ export default({
       desc: [
          {id: 1, goodId: 1, desc: 
          `
-Aqro biznes dəyər zəncirinin inkişafına dəstək olaraq
+Aqro biznes dəyər zəncirinin 
+inkişafına dəstək olaraq
 “Azərtexnika” MMC Təklif Edir
-Türkiyənin məhşur Tümossan firmasının Azərbaycandakı rəsmi nümayəndəsi Azərtexnika mmc
-Dövlət dəstəyi ilə Kənd təsərrüfatı texnikalarını lizinqlə satışını həyata keçirir
+Türkiyənin məhşur Tümossan 
+firmasının Azərbaycandakı 
+rəsmi nümayəndəsi Azərtexnika mmc
+Dövlət dəstəyi ilə Kənd təsərrüfatı 
+texnikalarını lizinqlə satışını 
+həyata keçirir
    
 Email: azertexnika.az@gmail.com
-Ünvan:Abşeron rayonu, Saray qəsəbəsi, Bakı-Sumqayıt şosessinin 21-ci kilometri
+Ünvan:Abşeron rayonu, Saray qəsəbəsi, 
+Bakı-Sumqayıt şosessinin 21-ci kilometri
    
 TÜMOSAN 5275-Modeli BAĞÇILIQ
 o Motor TÜMOSAN
